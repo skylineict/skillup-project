@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Management</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Add your custom CSS here */
+        body {
+            background-color: #f5f5f5;
+        }
+        .sidebar {
+            background-color: #fff;
+            height: 100vh;
+            padding-top: 20px;
+        }
+        .sidebar .nav-link {
+            color: #000;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .table th, .table td {
+            vertical-align: middle;
+        }
+        .badge-status {
+            display: inline-block;
+            padding: 0.35em 0.65em;
+            font-size: 75%;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 0.375rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="d-flex">
+    <nav class="sidebar col-md-2 d-none d-md-block bg-light">
+        <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        <i class="fas fa-users"></i>
+                        Users
+                    </a>
+                </li>
+                <!-- Add other sidebar items here -->
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content col-md-10">
+        <h2>Users</h2>
+        <div class="card">
+            <div class="card-header">
+                <form class="form-inline">
+                    <input type="email" class="form-control mr-2" placeholder="Email">
+                    <input type="text" class="form-control mr-2" placeholder="Mobile">
+                    <select class="form-control mr-2">
+                        <option selected>Select Group</option>
+                        <!-- Add other options here -->
+                    </select>
+                    <button type="button" class="btn btn-primary mr-2">Filter</button>
+                    <button type="button" class="btn btn-secondary">Clear</button>
+                </form>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Gender</th>
+                            <th>Groups</th>
+                            <th>Mobile</th>
+                            <th>Date Of Birth</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Prateek Nahata</td>
+                            <td>manager@exaample.com</td>
+                            <td>Male</td>
+                            <td><span class="badge badge-primary">Manager</span></td>
+                            <td>9586352289</td>
+                            <td>1994-09-14</td>
+                            <td><span class="badge badge-status badge-success">Active</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></button>
+                                <button class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                        <!-- Add other rows here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-primary float-right">Add User</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

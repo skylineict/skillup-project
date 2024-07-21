@@ -1,0 +1,45 @@
+/* Add your custom CSS here */
+body {
+    background-color: #f5f5f5;
+}
+.sidebar {
+    background-color: #fff;
+    height: 100vh;
+    padding-top: 20px;
+}
+.sidebar .nav-link {
+    color: #000;
+}
+.content {
+    margin-left: 10px;
+    padding: 20px;
+}
+.table th, .table td {
+    vertical-align: middle;
+}
+.badge-status {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.375rem;
+}
+.sidebar .user-profile {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.sidebar .user-profile img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.sidebar .user-profile .username {
+    font-weight: bold;
+    margin-top: 10px;
+}

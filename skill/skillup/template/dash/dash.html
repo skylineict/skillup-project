@@ -1,0 +1,143 @@
+{% extends "dash/header.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+
+<!-- page content -->
+<div id="app-content">
+
+    <div class="app-content-area">
+
+        <div class="container-fluid">
+
+            <div class=" rounded-3 mybg  " style="background-color: #2E3092;">
+                <div class="row mb-5 ">
+                    <div class="col-lg-12 col-md-12 col-12">
+                        <div class="p-6 d-lg-flex justify-content-between align-items-center ">
+                            <div class="d-md-flex align-items-center">
+                                <img src="{{user.profiles.image.url}}" alt="Image"
+                                    class="rounded-circle avatar avatar-xl">
+                                <div class="ms-md-4 mt-3 mt-md-0 lh-1">
+                                    <h3 class="text-white">{{user.full_name | upper }} | <span class="admin">{{user.profiles.department | upper }}</span>
+                                    </h3>
+                                    
+                                </div>
+                            </div>
+                            <div class=" d-lg-block top ">
+                                <a href="#!" class="btn " style="background-color: #fff; color: #060505;">
+                                    Register Course Now</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1  row-cols-xl-4 row-cols-md-2 ">
+
+                <div class="col mb-5">
+                    <div class="card h-100 card-lift">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-muted fw-semi-bold ">Admission Status</span>
+
+
+                            </div>
+                            <div class="mt-4 mb-3 d-flex align-items-center lh-1">
+                                <h5 class="fw-bold  mb-0">{{user.profiles.admitted}}</h5>
+
+                            </div>
+                            <a href="#!" class="btn-link fw-semi-bold">Register Course</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100 card-lift">
+                        
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-muted fw-semi-bold ">Student Passode</span>
+
+
+                            </div>
+                            <div class="mt-4 mb-3 d-flex align-items-center lh-1">
+                                <h5 class="fw-bold  mb-0">Pass-0034567</h5>
+
+                            </div>
+                            <a href="#!" class="btn-link fw-semi-bold">Re-assign</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100 card-lift">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-muted fw-semi-bold ">Student Task</span>
+
+
+                            </div>
+                            <div class="mt-4 mb-3 d-flex align-items-center lh-1">
+                                <h5 class="fw-bold  mb-0">pending</h5>
+
+                            </div>
+                            <a href="#!" class="btn-link fw-semi-bold">Submit Task</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100 card-lift">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-muted fw-semi-bold ">Project Tracking</span>
+
+
+                            </div>
+                            <div class="mt-4 mb-3 d-flex align-items-center lh-1">
+                                <h5 class="fw-bold  mb-0">10%</h5>
+                            </div>
+                            <a href="#!" class="btn-link fw-semi-bold">My Project</a>
+                        </div>
+                    </div>
+                </div>
+             
+
+            </div>
+
+<style>
+    .con{
+        width: 90%;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 0 auto;
+    
+    
+
+    }
+</style> 
+            <div class="card h-100 con">
+               
+                <div class="card-body">
+                  <div id="visitorBlog"></div>
+                </div>
+              </div>
+
+         
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock content %}
+

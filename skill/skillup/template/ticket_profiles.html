@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Web Prototype</title>
+</head>
+
+<body style="background-color: #f0f0f0; margin-top: 50px; font-size: 20px;">
+
+    <div style="width: 100%; max-width: 960px; margin: 0 auto; padding: 0 15px;">
+        <div style="background-color: #fff; border-radius: 0.25rem; box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); margin-bottom: 1rem;">
+            <div style="display: flex; flex-wrap: wrap; margin-right: -15px; margin-left: -15px;">
+                
+                <div style="flex: 0 0 66.666667%; max-width: 66.666667%;">
+                    <h4 style="color: red;">Boi Impact Program:</h4>
+                    <ol style="padding-left: 1rem;">
+                        <li>
+                            <span style="color: red;">Instructions:</span> Congratulations! Use your DPT number to log in
+                            to access your dashboard. Download the registration ticket; this will be used for your
+                            screening and access to the training center. Log in to check your admission status.
+                        </li>
+                        <li>Full Name: <strong>{{profile.user.full_name}}</strong></li>
+                        <li>DPT NO: <strong>{{profile.user.dp_no}}</strong></li>
+                        <li>Faculty: <strong>{{profile.faculty}}</strong></li>
+                        <li>Department: <strong>{{profile.department}}</strong></li>
+                    </ol>
+                </div>
+
+                <div style="flex: 0 0 33.333333%; max-width: 33.333333%; display: flex; justify-content: center; align-items: center;">
+                    <img src="{{profile.image.url}}" alt="QR Code" style="width: 200px; height: 200px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

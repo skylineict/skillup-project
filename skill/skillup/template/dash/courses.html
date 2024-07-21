@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="Codescandy" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8S4MT3EYG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-M8S4MT3EYG');
+    </script>
+
+    <!-- Favicon icon-->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon/favicon.ico" />
+
+
+    <!-- Libs CSS -->
+    <link href="assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="assets/libs/%40mdi/font/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/css/theme.min.css">
+
+    <title>Analytics | Dash UI - Bootstrap 5 Admin Dashboard Template</title>
+
+
+    <style>
+        .fw-bold {
+
+            color: #dc3545;
+        }
+
+
+        h4 {
+
+            color: #28a745;
+            text-transform: uppercase;
+        }
+
+@media screen and (max-width:400px) {
+            .d-none {
+                display: block !important;
+                margin-top: 20px !important;
+
+
+
+            }
+
+
+
+            #sideNavbar {
+
+                margin-top: 50px;
+
+
+            }
+
+            .mybg {
+
+                margin-top: 0px;
+                text-align: center;
+            }
+
+
+            .admin {
+
+                display: block;
+            }
+.courser-btn {
+
+position: absolute;
+top: 80px;
+}
+
+
+.card1{
+
+height: 150px;
+
+}
+
+
+.card-lift {
+
+	background-color: #d6d6d6;
+}
+
+
+.taks-master{
+
+color: #fff;
+}
+
+.connect{
+
+ position: absolute;
+ top:80px;
+ right: 125px;
+
+ 
+
+}
+
+
+.connect-body{
+
+  height: 20vh;
+
+}
+
+}
+
+
+
+
+    </style>
+</head>
+
+
+  <body>
+    <main id="main-wrapper" class="main-wrapper">
+		<div class="header">
+            <!-- navbar -->
+            <div class="navbar-custom navbar navbar-expand-lg">
+                <div class="container-fluid px-0">
+
+
+                    <a id="nav-toggle" href="#!" class="ms-auto ms-md-0 me-0 me-lg-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                            class="bi bi-text-indent-left text-muted" viewBox="0 0 16 16">
+                            <path
+                                d="M2 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm.646 2.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L4.293 8 2.646 6.354a.5.5 0 0 1 0-.708zM7 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                    </a>
+
+
+
+                </div>
+            </div>
+        </div>
+
+		<div class="navbar-vertical navbar nav-dashboard" style="background-color: #2E3092;">
+            <div class="h-100 mt-5" data-simplebar>
+                <!-- Brand logo -->
+
+                <!-- Navbar nav -->
+                <ul class="navbar-nav flex-column" id="sideNavbar">
+                    <!-- Nav item -->
+                    <li class="nav-item">
+                        <a class="nav-link has-arrow " href="#!" data-bs-toggle="collapse"
+                            data-bs-target="#navDashboard" aria-expanded="false" aria-controls="navDashboard">
+                            <i data-feather="home" class="nav-icon me-2 icon-xxs"></i>
+                            Dashboard
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link  collapsed " href="#!">
+
+                            <i class="nav-icon me-2 icon-xxs" data-feather="file"></i>
+                            Course
+                        </a>
+
+                    </li>
+
+
+                    <!-- Nav item -->
+                    <li class="nav-item">
+                        <a class="nav-link has-arrow " href="chat-app.html">
+                            <i data-feather="message-square" class="nav-icon me-2 icon-xxs"></i>
+                            Resources
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link has-arrow " href="chat-app.html">
+                            <i data-feather="message-square" class="nav-icon me-2 icon-xxs"></i>
+                            Project
+                        </a>
+                    </li>
+                    <!-- Nav item -->
+
+
+                    <!-- Nav item -->
+                    <li class="nav-item">
+                        <a class="nav-link has-arrow  collapsed " href="#!" data-bs-toggle="collapse"
+                            data-bs-target="#navKanban" aria-expanded="false" aria-controls="navKanban">
+                            <i data-feather="layout" class="nav-icon me-2 icon-xxs"></i>
+                            Task
+                        </a>
+
+                        <div id="navKanban" class="collapse " data-bs-parent="#sideNavbar">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link has-arrow " href="task-kanban-grid.html">Submit</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link has-arrow " href="task-kanban-list.html">Veiw Task</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link  collapsed " href="#!">
+
+                            <i data-feather="user" class="nav-icon me-2 icon-xxs"></i>
+                            Profile
+                        </a>
+
+                    </li>
+
+
+                    <li>
+                        <a class="dropdown-item" href="">
+                            <i class="nav-icon me-2 icon-xxs" data-feather="power"></i>
+                            Sign Out
+                        </a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>
+
+
+
+
+      <!-- page content -->
+      <div id="app-content">
+
+        <div class="app-content-area">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-12">
+                <!-- Page header -->
+                <div
+                  class="d-flex justify-content-between align-items-center mb-4"
+                >
+                  <h3 class="mb-0 ">List Of Avaliable Skills</h3>
+
+                  
+
+                </div>
+
+                <style>
+
+
+
+
+                  
+                </style>
+
+                <div class="row row-cols-1  row-cols-xl-2 row-cols-md-2 ">
+                    <div class="col mb-5 card1">
+                        <div class="card h-100 card-lift "  >
+                            <div class="d-flex justify-content-around align-items-center p-6">
+                              <div class="courser">
+                                <div class="title">
+                                    
+                                    <h4 class="mb-1  text-danger">Course Program</h4>
+                                    <h5 class="mb-0 text-success ">Web Design(Wordpress)</h5>
+                                   
+                                </div>
+                                
+                              </div>
+                              <div class="courser-btn mt-4">
+                                <a href="#!" class=" btn btn-danger">Select</a>
+                              </div>
+                             
+                            </div>
+                            
+                        </div>
+                    </div>
+                   
+                    <div class="col mb-5 card1">
+                        <div class="card h-100 card-lift "  >
+                            <div class="d-flex justify-content-around align-items-center p-6">
+                              <div class="courser">
+                                <div class="title">
+                                    
+                                    <h4 class="mb-1  text-danger">Course Program</h4>
+									<h5 class="mb-0 text-success ">Digital Marketing</h5>
+                                   
+                                </div>
+                                
+                              </div>
+                              <div class="courser-btn mt-4">
+                                <a href="#!" class=" btn btn-danger">Select</a>
+                              </div>
+                             
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+                    <div class="col mb-5 card1">
+                        <div class="card h-100 card-lift "  >
+                            <div class="d-flex justify-content-around align-items-center p-6">
+                              <div class="courser">
+                                <div class="title">
+                                    
+                                    <h4 class="mb-1  text-danger">Course Program</h4>
+									<h5 class="mb-0 text-success ">Data analysis</h5>
+                                   
+                                </div>
+                                
+                              </div>
+                              <div class="courser-btn mt-4">
+                                <a href="#!" class=" btn btn-danger">Select</a>
+                              </div>
+                             
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+                    <div class="col mb-5 card1">
+                        <div class="card h-100 card-left "  >
+                            <div class="d-flex justify-content-around align-items-center p-6">
+                              <div class="courser">
+                                <div class="title">
+                                    
+                                    <h4 class="mb-1  text-danger">Course Program</h4>
+									<h5 class="mb-0 text-success ">Product Design(UI/UX)</h5>
+                                   
+                                </div>
+                                
+                              </div>
+                              <div class="courser-btn mt-4">
+                                <a href="#!" class=" btn btn-danger">Select</a>
+                              </div>
+                             
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+                    <div class="col mb-5 card1">
+                        <div class="card h-100 card-lift "  >
+                            <div class="d-flex justify-content-around align-items-center p-6">
+                              <div class="courser">
+                                <div class="title">
+                                    
+                                    <h4 class="mb-1  text-danger">Course Program</h4>
+									<h5 class="mb-0 text-success ">blockchain Tech</h5>
+                                   
+                                </div>
+                                
+                              </div>
+                              <div class="courser-btn mt-4">
+                                <a href="#!" class=" btn btn-danger">Select</a>
+                              </div>
+                             
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col mb-5 card1">
+                        <div class="card h-100 card-lift "  >
+                            <div class="d-flex justify-content-around align-items-center p-6">
+                              <div class="courser">
+                                <div class="title">
+                                    
+                                    <h4 class="mb-1  text-danger">Course Program</h4>
+									<h5 class="mb-0 text-success ">Virtual assistant</h5>
+                                   
+                                </div>
+                                
+                              </div>
+                              <div class="courser-btn mt-4">
+                                <a href="#!" class=" btn btn-danger">Select</a>
+                              </div>
+                             
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col mb-5 card1">
+                        <div class="card h-100 card-lift "  >
+                            <div class="d-flex justify-content-around align-items-center p-6">
+                              <div class="courser">
+                                <div class="title">
+                                    
+                                    <h4 class="mb-1  text-danger">Course Program</h4>
+									<h5 class="mb-0 text-success ">Ms Suit /Google service</h5>
+                                   
+                                </div>
+                                
+                              </div>
+                              <div class="courser-btn mt-4">
+                                <a href="#!" class=" btn btn-danger">Select</a>
+                              </div>
+                             
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col mb-5 card1">
+                        <div class="card h-100 card-lift "  >
+                            <div class="d-flex justify-content-around align-items-center p-6">
+                              <div class="courser">
+                                <div class="title">
+                                    
+                                    <h4 class="mb-1  text-danger">Course Program</h4>
+									<h5 class="mb-0 text-success ">Web Development</h5>
+                                   
+                                </div>
+                                
+                              </div>
+                              <div class="courser-btn mt-4">
+                                <a href="#!" class=" btn btn-danger">Select</a>
+                              </div>
+                             
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/feather-icons/dist/feather.min.js"></script>
+    <script src="assets/libs/simplebar/dist/simplebar.min.js"></script>
+
+    <!-- Theme JS -->
+    <script src="assets/js/theme.min.js"></script>
+
+    <!-- jsvectormap -->
+    <script src="assets/libs/jsvectormap/dist/js/jsvectormap.min.js"></script>
+    <script src="assets/libs/jsvectormap/dist/maps/world.js"></script>
+    <script src="assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="assets/js/vendors/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+
+  </body>
+
+<!-- Mirrored from dashui.codescandy.com/dashuipro/pages/starter.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Jun 2024 09:12:14 GMT -->
+</html>

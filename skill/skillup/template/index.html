@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'blog/blog.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Management</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    
+
+
+
+    <div class="d-flex">
+        <nav class="sidebar col-md-2 d-none d-md-block bg-light">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="fas fa-users"></i>
+                            Users
+                        </a>
+                    </li>
+                    <!-- Add other sidebar items here -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-cogs"></i>
+                            Config
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-chart-bar"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-book"></i>
+                            Apps
+                        </a>
+                    </li>
+                    <!-- Add more items as needed -->
+                </ul>
+            </div>
+        </nav>
+
+        <!-- menu bar is here  -->
+
+    <div class="content col-md-10">
+        <h2>Users</h2>
+        <div class="card">
+            <div class="card-header">
+                <form class="form-inline">
+                    <input type="email" class="form-control mr-2" placeholder="Email">
+                    <input type="text" class="form-control mr-2" placeholder="Mobile">
+                    <select class="form-control mr-2">
+                        <option selected>Select Group</option>
+                        <!-- Add other options here -->
+                    </select>
+                    <button type="button" class="btn btn-primary mr-2">Filter</button>
+                    <button type="button" class="btn btn-secondary">Clear</button>
+                </form>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Gender</th>
+                            <th>Groups</th>
+                            <th>Mobile</th>
+                            <th>Date Of Birth</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Prateek Nahata</td>
+                            <td>manager@exaample.com</td>
+                            <td>Male</td>
+                            <td><span class="badge badge-primary">Manager</span></td>
+                            <td>9586352289</td>
+                            <td>1994-09-14</td>
+                            <td><span class="badge badge-status badge-success">Active</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></button>
+                                <button class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                        <!-- Add other rows here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-primary float-right" data-toggle="modal" data-target="#addUserModal">Add User</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="addUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addUserModalLabel">Add User</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" placeholder="Enter full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="userImage">Image</label>
+                        <input type="file" class="form-control-file" id="userImage">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" rows="3" placeholder="Enter description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select class="form-control" id="status">
+                            <option>Active</option>
+                            <option>Inactive</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

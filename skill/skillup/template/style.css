@@ -1,0 +1,100 @@
+body {
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.container{
+
+    width: 80%;
+    
+
+}
+
+.header {
+    color: #2563FF;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.card {
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #FFE7E7;
+    color: #333;
+    margin-bottom: 20px;
+    height: 400px;
+   
+}
+.qr-section {
+    background-color: #2563FF;
+    color: #fff;
+    border-radius: 0 0 20px 20px;
+    /* text-align: center; */
+    display: flex;
+
+}
+
+
+
+.join-now {
+    color: #FFC700;
+}
+.subscribe {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF8FB1;
+}
+.subscribe-highlight {
+    color: #2563FF;
+}
+.email-input {
+    border: 2px solid #2563FF;
+    border-radius: 5px;
+    padding: 10px;
+    width: 70%;
+    max-width: 300px;
+}
+.get-started-btn {
+    background-color: #2563FF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: bold;
+}
+.footer {
+    color: #999;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        text-align: center;
+    }
+    .subscribe {
+        font-size: 20px;
+    }
+    .email-input {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 10px;
+    }
+    .get-started-btn {
+        width: 100%;
+    }
+    .qr-section p {
+        font-size: 14px;
+    }
+    .qr-section img {
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        padding: 10px;
+    }
+    .qr-section {
+        padding: 10px;
+    }
+}

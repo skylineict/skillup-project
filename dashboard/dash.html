@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="Codescandy" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8S4MT3EYG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-M8S4MT3EYG');
+    </script>
+
+    <!-- Favicon icon-->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon/favicon.ico" />
+
+
+    <!-- Libs CSS -->
+    <link href="assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="assets/libs/%40mdi/font/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/css/theme.min.css">
+
+    <title>Analytics | Dash UI - Bootstrap 5 Admin Dashboard Template</title>
+
+
+    <style>
+        .fw-bold {
+
+            color: #dc3545;
+        }
+
+
+        h4 {
+
+            color: #28a745;
+            text-transform: uppercase;
+        }
+
+        @media screen and (max-width:400px) {
+            .d-none {
+                display: block !important;
+                margin-top: 20px !important;
+
+
+
+            }
+
+
+
+            #sideNavbar {
+
+                margin-top: 50px;
+
+
+            }
+
+            .mybg {
+
+                margin-top: 0px;
+                text-align: center;
+            }
+
+
+            .admin {
+
+                display: block;
+            }
+
+
+            .card-left{
+                background-color: hsl(0, 49%, 13%)!important;
+}
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <main id="main-wrapper" class="main-wrapper">
+        <div class="header">
+            <!-- navbar -->
+            <div class="navbar-custom navbar navbar-expand-lg">
+                <div class="container-fluid px-0">
+
+
+                    <a id="nav-toggle" href="#!" class="ms-auto ms-md-0 me-0 me-lg-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                            class="bi bi-text-indent-left text-muted" viewBox="0 0 16 16">
+                            <path
+                                d="M2 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm.646 2.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L4.293 8 2.646 6.354a.5.5 0 0 1 0-.708zM7 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                    </a>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- navbar vertical -->
+
+        <!-- Sidebar -->
+
+        <div class="navbar-vertical navbar nav-dashboard" style="background-color: #2E3092;">
+            <div class="h-100 mt-5" data-simplebar>
+                <!-- Brand logo -->
+
+                <!-- Navbar nav -->
+                <ul class="navbar-nav flex-column" id="sideNavbar">
+                    <!-- Nav item -->
+                    <li class="nav-item">
+                        <a class="nav-link has-arrow " href="#!" data-bs-toggle="collapse"
+                            data-bs-target="#navDashboard" aria-expanded="false" aria-controls="navDashboard">
+                            <i data-feather="home" class="nav-icon me-2 icon-xxs"></i>
+                            Dashboard
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link  collapsed " href="#!">
+
+                            <i class="nav-icon me-2 icon-xxs" data-feather="file"></i>
+                            Course
+                        </a>
+
+                    </li>
+
+
+                    <!-- Nav item -->
+                    <li class="nav-item">
+                        <a class="nav-link has-arrow " href="chat-app.html">
+                            <i data-feather="message-square" class="nav-icon me-2 icon-xxs"></i>
+                            Resources
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link has-arrow " href="chat-app.html">
+                            <i data-feather="message-square" class="nav-icon me-2 icon-xxs"></i>
+                            Project
+                        </a>
+                    </li>
+                    <!-- Nav item -->
+
+
+                    <!-- Nav item -->
+                    <li class="nav-item">
+                        <a class="nav-link has-arrow  collapsed " href="#!" data-bs-toggle="collapse"
+                            data-bs-target="#navKanban" aria-expanded="false" aria-controls="navKanban">
+                            <i data-feather="layout" class="nav-icon me-2 icon-xxs"></i>
+                            Task
+                        </a>
+
+                        <div id="navKanban" class="collapse " data-bs-parent="#sideNavbar">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link has-arrow " href="task-kanban-grid.html">Submit</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link has-arrow " href="task-kanban-list.html">Veiw Task</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link  collapsed " href="#!">
+
+                            <i data-feather="user" class="nav-icon me-2 icon-xxs"></i>
+                            Profile
+                        </a>
+
+                    </li>
+
+
+                    <li>
+                        <a class="dropdown-item" href="">
+                            <i class="nav-icon me-2 icon-xxs" data-feather="power"></i>
+                            Sign Out
+                        </a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>
+
+
+
+        <!-- page content -->
+        <div id="app-content">
+
+            <div class="app-content-area">
+
+                <div class="container-fluid">
+
+                    <div class=" rounded-3 mybg  " style="background-color: #28a745;">
+                        <div class="row mb-5 ">
+                            <div class="col-lg-12 col-md-12 col-12">
+                                <div class="p-6 d-lg-flex justify-content-between align-items-center ">
+                                    <div class="d-md-flex align-items-center">
+                                        <img src="assets/img/pass.jpg" alt="Image"
+                                            class="rounded-circle avatar avatar-xl">
+                                        <div class="ms-md-4 mt-3 mt-md-0 lh-1">
+                                            <h3 class="text-white">Olisa Macaulay S | <span class="admin">Programmer</span> </h3>
+                                            <small class="text-white">Skill: HTML,CSS,JAVASCRIPT</small>
+                                        </div>
+                                    </div>
+                                    <div class="d-none d-lg-block ">
+                                        <a href="#!" class="btn " style="background-color: #2E3092; color: #fff;">New
+                                            Project is Avaliable</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1  row-cols-xl-4 row-cols-md-2 ">
+                        <div class="col mb-5">
+                            <div class="card h-100 card-lift">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted fw-semi-bold ">Student Passode</span>
+                               
+
+                                    </div>
+                                    <div class="mt-4 mb-3 d-flex align-items-center lh-1">
+                                        <h5 class="fw-bold  mb-0">Pass-0034567</h5>
+                                       
+                                    </div>
+                                    <a href="#!" class="btn-link fw-semi-bold">Re-assign</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-5">
+                            <div class="card h-100 card-lift">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted fw-semi-bold ">Student Task</span>
+                                     
+
+                                    </div>
+                                    <div class="mt-4 mb-3 d-flex align-items-center lh-1">
+                                        <h5 class="fw-bold  mb-0">pending</h5>
+                                      
+                                    </div>
+                                    <a href="#!" class="btn-link fw-semi-bold">Submit Task</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-5">
+                            <div class="card h-100 card-lift">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted fw-semi-bold ">Project Tracking</span>
+                                        
+
+                                    </div>
+                                    <div class="mt-4 mb-3 d-flex align-items-center lh-1">
+                                        <h5 class="fw-bold  mb-0">10%</h5>
+                                    </div>
+                                    <a href="#!" class="btn-link fw-semi-bold">My Project</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-5">
+                            <div class="card h-100 card-lift">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted fw-semi-bold ">Admission</span>
+                                        
+
+                                    </div>
+                                    <div class="mt-4 mb-3 d-flex align-items-center lh-1">
+                                        <h5 class="fw-bold  mb-0">pending</h5>
+
+                                    </div>
+                                    <a href="#!" class="btn-link fw-semi-bold">apply</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row row-cols-lg-1 ">
+                        <div class="col mb-5">
+
+
+                        </div>
+                        <div class="col mb-5">
+                            <div class="card h-100 cohort">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-0">Cohort of the Week</h4>
+
+
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive table-card">
+                                        <table class="table mb-0 text-nowrap table-centered">
+                                            <thead class="table-success">
+                                                <tr>
+
+                                                    <th>Cohorts</th>
+                                                    <th class="text-end">Weekly Grade</th>
+                                                    <th class="text-end"></th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+
+                                                    <td>
+                                                        Cohorts 1
+                                                    </td>
+                                                    <td class="text-end">
+                                                        90%
+                                                    </td>
+                                                    <td class="ps-0">
+                                                        <div class="progress" style="height: 4px;">
+                                                            <div class="progress-bar bg-info" role="progressbar"
+                                                                aria-label="Basic example" style="width: 75%"
+                                                                aria-valuenow="75" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        Google
+                                                    </td>
+                                                    <td class="text-end">
+                                                        4,768
+                                                    </td>
+                                                    <td class="ps-0">
+                                                        <div class="progress" style="height: 4px;">
+                                                            <div class="progress-bar bg-success" role="progressbar"
+                                                                aria-label="Basic example" style="width: 54%"
+                                                                aria-valuenow="54" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        Referrals
+                                                    </td>
+                                                    <td class="text-end">
+                                                        425
+                                                    </td>
+                                                    <td class="ps-0">
+                                                        <div class="progress" style="height: 4px;">
+                                                            <div class="progress-bar" role="progressbar"
+                                                                aria-label="Basic example" style="width: 64%"
+                                                                aria-valuenow="64" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        Social Media
+                                                    </td>
+                                                    <td class="text-end">
+                                                        245
+                                                    </td>
+                                                    <td class="ps-0">
+                                                        <div class="progress" style="height: 4px;">
+                                                            <div class="progress-bar bg-warning" role="progressbar"
+                                                                aria-label="Basic example" style="width: 34%"
+                                                                aria-valuenow="34" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        Campaign
+                                                    </td>
+                                                    <td class="text-end">
+                                                        23
+                                                    </td>
+                                                    <td class="ps-0">
+                                                        <div class="progress" style="height: 4px;">
+                                                            <div class="progress-bar bg-info" role="progressbar"
+                                                                aria-label="Basic example" style="width: 23%"
+                                                                aria-valuenow="23" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        Others
+                                                    </td>
+                                                    <td class="text-end">
+                                                        153
+                                                    </td>
+                                                    <td class="ps-0">
+                                                        <div class="progress" style="height: 4px;">
+                                                            <div class="progress-bar bg-danger" role="progressbar"
+                                                                aria-label="Basic example" style="width: 14%"
+                                                                aria-valuenow="14" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-12 col-md-12 col-12">
+                        <!-- Page header -->
+                        <div class="mb-4">
+                            <h4 class="mb-0 ">Ongoing Project</h4>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-5">
+                            <!-- card -->
+                            <div class="card h-100">
+                                <!-- card body -->
+                                <div class="card-body">
+                                    <!-- heading-->
+                                    <div class="d-flex align-items-center
+                                            justify-content-between">
+
+                                        <!-- text-->
+
+                                        <div>
+                                            <h4 class="mb-0 h5"><a href="#!" class="text-inherit"
+                                                    style="color: #dc3545;">Bootsrap 5 UI Kit
+                                                    Design in Figma</a></h4>
+
+
+
+                                        </div>
+                                        <!-- dropdown-->
+                                        <div class="d-flex align-items-center">
+
+
+                                        </div>
+                                    </div>
+                                    <!-- para-->
+                                    <div class="mt-3 mb-4">
+                                        <p class="mb-0">Web application design is an important stage
+                                            when building a web application...</p>
+                                    </div>
+                                    <!-- progress -->
+                                    <div class="d-flex justify-content-between
+                                            align-items-center mb-5">
+                                        <div class="d-flex align-items-center">
+                                            <!-- avatar group -->
+
+                                        </div>
+                                        <!-- text -->
+                                        <div>
+                                            <span class="badge badge-info-soft  ">In Progress</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- progress bar -->
+                                        <div class="d-flex justify-content-between mb-2 fs-6"> <span>Progress</span>
+                                            <span>45%</span>
+                                        </div>
+                                        <div class="progress" style="height: 6px;">
+                                            <div class="progress-bar bg-info " role="progressbar" style="width: 45%;"
+                                                aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card footer -->
+                                <div class="card-footer p-0" style="
+                            background-color: #d1e7dd;">
+                                    <div class="d-flex justify-content-between ">
+                                        <div class="w-50 py-3 px-4 ">
+                                            <h6 class="mb-0 text-muted">Start Date:</h6>
+                                            <p class="text-dark fs-6  mb-0">1 Jan, 2023</p>
+                                        </div>
+                                        <div class="border-start w-50 py-3 px-4">
+                                            <h6 class="mb-0 text-muted">Due Date:</h6>
+                                            <p class="text-dark fs-6  mb-0">1 Jan, 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-5">
+                            <!-- card -->
+                            <div class="card h-100">
+                                <!-- card body -->
+                                <div class="card-body">
+                                    <!-- heading-->
+                                    <div class="d-flex align-items-center
+                                            justify-content-between">
+
+                                        <!-- text-->
+
+                                        <div>
+                                            <h4 class="mb-0 h5"><a href="#!" class="text-inherit"
+                                                    style="color: #dc3545;">Bootsrap 5 UI Kit
+                                                    Design in Figma</a></h4>
+
+
+
+                                        </div>
+                                        <!-- dropdown-->
+                                        <div class="d-flex align-items-center">
+
+
+                                        </div>
+                                    </div>
+                                    <!-- para-->
+                                    <div class="mt-3 mb-4">
+                                        <p class="mb-0">Web application design is an important stage
+                                            when building a web application...</p>
+                                    </div>
+                                    <!-- progress -->
+                                    <div class="d-flex justify-content-between
+                                            align-items-center mb-5">
+                                        <div class="d-flex align-items-center">
+                                            <!-- avatar group -->
+
+                                        </div>
+                                        <!-- text -->
+                                        <div>
+                                            <span class="badge badge-info-soft  ">In Progress</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- progress bar -->
+                                        <div class="d-flex justify-content-between mb-2 fs-6"> <span>Progress</span>
+                                            <span>45%</span>
+                                        </div>
+                                        <div class="progress" style="height: 6px;">
+                                            <div class="progress-bar bg-info " role="progressbar" style="width: 45%;"
+                                                aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card footer -->
+                                <div class="card-footer p-0" style="
+                            background-color: #d1e7dd;">
+                                    <div class="d-flex justify-content-between ">
+                                        <div class="w-50 py-3 px-4 ">
+                                            <h6 class="mb-0 text-muted">Start Date:</h6>
+                                            <p class="text-dark fs-6  mb-0">1 Jan, 2023</p>
+                                        </div>
+                                        <div class="border-start w-50 py-3 px-4">
+                                            <h6 class="mb-0 text-muted">Due Date:</h6>
+                                            <p class="text-dark fs-6  mb-0">1 Jan, 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-5">
+                            <!-- card -->
+                            <div class="card h-100">
+                                <!-- card body -->
+                                <div class="card-body">
+                                    <!-- heading-->
+                                    <div class="d-flex align-items-center
+                                            justify-content-between">
+
+                                        <!-- text-->
+
+                                        <div>
+                                            <h4 class="mb-0 h5"><a href="#!" class="text-inherit"
+                                                    style="color: #dc3545;">Bootsrap 5 UI Kit
+                                                    Design in Figma</a></h4>
+
+
+
+                                        </div>
+                                        <!-- dropdown-->
+                                        <div class="d-flex align-items-center">
+
+
+                                        </div>
+                                    </div>
+                                    <!-- para-->
+                                    <div class="mt-3 mb-4">
+                                        <p class="mb-0">Web application design is an important stage
+                                            when building a web application...</p>
+                                    </div>
+                                    <!-- progress -->
+                                    <div class="d-flex justify-content-between
+                                            align-items-center mb-5">
+                                        <div class="d-flex align-items-center">
+                                            <!-- avatar group -->
+
+                                        </div>
+                                        <!-- text -->
+                                        <div>
+                                            <span class="badge badge-danger-soft ">Cancel</span>
+
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- progress bar -->
+                                        <div class="d-flex justify-content-between mb-2 fs-6"> <span>Progress</span>
+                                            <span>45%</span>
+                                        </div>
+                                        <div class="progress" style="height: 6px;">
+                                            <div class="progress-bar bg-info " role="progressbar" style="width: 45%;"
+                                                aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- card footer -->
+                                <div class="card-footer p-0" style="
+                            background-color: #d1e7dd;">
+                                    <div class="d-flex justify-content-between ">
+                                        <div class="w-50 py-3 px-4 ">
+                                            <h6 class="mb-0 text-muted">Start Date:</h6>
+                                            <p class="text-dark fs-6  mb-0">1 Jan, 2023</p>
+                                        </div>
+                                        <div class="border-start w-50 py-3 px-4">
+                                            <h6 class="mb-0 text-muted">Due Date:</h6>
+                                            <p class="text-dark fs-6  mb-0">1 Jan, 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-5">
+                            <!-- card -->
+                            <div class="card h-100">
+                                <!-- card body -->
+                                <div class="card-body">
+                                    <!-- heading-->
+                                    <div class="d-flex align-items-center
+                                            justify-content-between">
+
+                                        <!-- text-->
+
+                                        <div>
+                                            <h4 class="mb-0 h5"><a href="#!" class="text-inherit"
+                                                    style="color: #dc3545;">Bootsrap 5 UI Kit
+                                                    Design in Figma</a></h4>
+
+
+
+                                        </div>
+                                        <!-- dropdown-->
+
+                                    </div>
+                                    <!-- para-->
+                                    <div class="mt-3 mb-4">
+                                        <p class="mb-0">Web application design is an important stage
+                                            when building a web application...</p>
+                                    </div>
+                                    <!-- progress -->
+                                    <div class="d-flex justify-content-between
+                                            align-items-center mb-5">
+                                        <div class="d-flex align-items-center">
+                                            <!-- avatar group -->
+
+                                        </div>
+                                        <!-- text -->
+                                        <div>
+                                            <span class="badge badge-success-soft ">Finished</span>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div>
+                                        <!-- progress bar -->
+                                        <div class="d-flex justify-content-between mb-2 fs-6"> <span>Progress</span>
+                                            <span>45%</span>
+                                        </div>
+                                        <div class="progress" style="height: 6px;">
+                                            <div class="progress-bar bg-info " role="progressbar" style="width: 45%;"
+                                                aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                                <!-- card footer -->
+                                <div class="card-footer p-0" style="
+                                background-color: #d1e7dd;">
+                                    <div class="d-flex justify-content-between ">
+                                        <div class="w-50 py-3 px-4 ">
+                                            <h6 class="mb-0 text-muted">Start Date:</h6>
+                                            <p class="text-dark fs-6  mb-0">1 Jan, 2023</p>
+                                        </div>
+                                        <div class="border-start w-50 py-3 px-4">
+                                            <h6 class="mb-0 text-muted">Due Date:</h6>
+                                            <p class="text-dark fs-6  mb-0">1 Jan, 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-12">
+                        <!-- Page header -->
+                        <div class="mb-4">
+                            <h4 class="mb-0 ">Cohort analysis</h4>
+
+                        </div>
+                    </div>
+
+                    <div class="row col-lg-12 col-md-12 col-12  ">
+                        <div class="col mb-5 ">
+                            <div class="card h-100">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-0">Cohort </h4>
+
+
+                                </div>
+                                <div class="card-body">
+
+
+                                    <div>
+                                        <canvas id="myChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+    <!-- Libs JS -->
+
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/feather-icons/dist/feather.min.js"></script>
+    <script src="assets/libs/simplebar/dist/simplebar.min.js"></script>
+
+    <!-- Theme JS -->
+    <script src="assets/js/theme.min.js"></script>
+
+    <!-- jsvectormap -->
+    <script src="assets/libs/jsvectormap/dist/js/jsvectormap.min.js"></script>
+    <script src="assets/libs/jsvectormap/dist/maps/world.js"></script>
+    <script src="assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="assets/js/vendors/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Cohort 1', 'cohort 2', 'cohort 3', 'cohort 4', 'cohort 5', 'cohort 6', 'cohort 6',
+                    'cohort 6', 'cohort 6', 'cohort 6', 'cohort 6', 'cohort 6'],
+                datasets: [{
+                    label: 'Cohort performance ogf the week',
+                    data: [12, 19, 3, 5, 2, 3, 40, 10, 30, 100, 40, 20, 50,],
+                    //   backgroundColor: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    borderWidth: 20,
+                    borderColo: 'rgba(0, 0, 0, 0.1)'
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+
+
+
+
+
+</body>
+
+
+<!-- Mirrored from dashui.codescandy.com/dashuipro/pages/dashboard-analytics.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Jun 2024 09:11:44 GMT -->
+
+</html>
