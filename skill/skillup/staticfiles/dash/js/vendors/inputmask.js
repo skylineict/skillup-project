@@ -1,1 +1,0 @@
-Inputmask().mask(document.querySelectorAll("input"));

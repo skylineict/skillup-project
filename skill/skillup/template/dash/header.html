@@ -9,7 +9,10 @@
     <meta name="author" content="Codescandy" />
     <meta name="csrf-token" content="{{ csrf_token }}">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8S4MT3EYG"></script>
     <script>
@@ -161,7 +164,7 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link has-arrow " href="" data-bs-toggle="modal" data-bs-target="#pendingadmission">
+                        <a class="nav-link has-arrow " href="{% url "project" %}">
                             <i data-feather="message-square" class="nav-icon me-2 icon-xxs"></i>
                             Project
                         </a>
@@ -174,16 +177,16 @@
                         <a class="nav-link has-arrow  collapsed " href="#!" data-bs-toggle="collapse"
                             data-bs-target="#navKanban" aria-expanded="false" aria-controls="navKanban">
                             <i data-feather="layout" class="nav-icon me-2 icon-xxs"></i>
-                            Task
+                            Class Room
                         </a>
 
                         <div id="navKanban" class="collapse " data-bs-parent="#sideNavbar">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link has-arrow " href=""  data-bs-toggle="modal" data-bs-target="#pendingadmission">Submit</a>
+                                    <a class="nav-link has-arrow " href=""  data-bs-toggle="modal" data-bs-target="#pendingadmission">Live Class</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link has-arrow " href="" data-bs-toggle="modal" data-bs-target="#pendingadmission">Veiw Task</a>
+                                    <a class="nav-link has-arrow " href="" data-bs-toggle="modal" data-bs-target="#pendingadmission">Recap Class</a>
                                 </li>
                             </ul>
                         </div>
@@ -291,6 +294,7 @@
         <script src="{% static 'dash/assets/libs/jsvectormap/dist/maps/world.js' %}"></script>
         <script src="{% static 'dash/assets/libs/apexcharts/dist/apexcharts.min.js' %}"></script>
         <script src="{% static 'dash/assets/js/vendors/chart.js' %}"></script>
+        <script src="{% static 'dash/assets/js/project_timer.js' %}"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="{% static 'js/logout.js' %}"></script>
 
@@ -302,6 +306,9 @@
 
 
     </main>
+
+
+    
 
     
 

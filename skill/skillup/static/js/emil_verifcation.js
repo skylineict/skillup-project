@@ -50,8 +50,16 @@ $(document).ready(function () {
                 $('#btn-text').text('Procced');
             }
         })
-    })
+    });
+
+
+
+
+
+
+
 });
+
 
 
 
@@ -81,15 +89,40 @@ $(document).ready(function () {
 
             success: function (res) {
                 console.log(res)
-                $message
-                    .removeClass('alert-danger')
-                    .addClass('alert-success')
-                    .text(res.success)
-                    .show();
-                setTimeout(function () {
-                    window.location = "/backend/";
+                if (res.success) {
+                    $message
+                        .removeClass('alert-danger')
+                        .addClass('alert-success')
+                        .text(res.success)
+                        .show();
+                    setTimeout(function () {
+                        window.location = "/backend/";
 
-                }, 1000)
+                    }, 1000)
+
+
+                };
+
+
+
+                if (res.admin) {
+                    console.log(res)
+                    console.log(res.admin)
+                    $message
+                        .removeClass('alert-danger')
+                        .addClass('alert-success')
+                        .text(res.admin)
+                        .show();
+                    setTimeout(function () {
+                        window.location = "/adminback/";
+
+                    }, 3000)
+
+
+                };
+
+
+
 
             },
 
@@ -147,6 +180,9 @@ $(document).ready(function () {
         })
     })
 })
+
+
+
 
 
 

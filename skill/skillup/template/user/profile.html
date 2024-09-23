@@ -68,9 +68,22 @@
                                     </select>
                                 </div>
 
+
+
                                 <div class="col-sm-6 m-b30" id="department" style="display: none;">
                                     <label class="form-label">department</label>
                                     <input type="text" name="department" class="form-control" placeholder="department">
+                                </div>
+                                <div class="col-sm-6 m-b30">
+                                    <label class="form-label d-block">courses </label>
+                                    <select class="selectpicke w-100" name="courses" id="courses">
+                                        <option value="choose">choose</option>
+                                        {% for courses in courses %}
+
+
+                                        <option value="{{courses.name}}">{{courses.name}}</option>
+                                        {% endfor %}
+                                    </select>
                                 </div>
                                 <div class="col-sm-6 m-b30" id="level" style="display: none;">
                                     <label class="form-label d-block">Level</label>

@@ -1,0 +1,165 @@
+{% extends "admin/header.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+
+<!-- page content -->
+<div id="app-content">
+
+  <div class="app-content-area">
+
+    <div class="container-fluid">
+
+
+
+      <div class="row">
+        <div class="col-xxl-9 mb-5">
+          <div class="card mb-5">
+
+            <div class="row row-cols-xl-4 row-cols-1 row-cols-md-2 g-0">
+              <div class="col ">
+                <div class="card-body ">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <span class="fw-semi-bold">Courses</span>
+                      <h2 class="mb-0 mt-2 fw-bold">{{courses_num}}</h2>
+
+                    </div>
+                    <div class="icon-shape icon-lg bg-warning-soft text-warning rounded-3">
+                      <i data-feather="users" class="icon-sm"></i>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col border-start-md">
+                <div class="card-body border-top border-top-md-0 ">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <span class="fw-semi-bold">Users With Course</span>
+                      <h2 class="mb-0 mt-2 fw-bold">{{users_courses}}</h2>
+
+                    </div>
+                    <div class="icon-shape icon-lg bg-info-soft text-info rounded-3">
+                      <i data-feather="file-text" class="icon-sm"></i>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+
+              <div class="col border-start-md mt-5">
+                <div class="card-footer text-center"> <a href="" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#createcohort">Add Courses</a> </div>
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+        <div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-xl-12 col-12 mb-5">
+        <!-- card  -->
+        <div class="card">
+          <!-- card header  -->
+          <div class="card-header">
+            <h4 class="mb-0">Available courses </h4>
+          </div>
+          <!-- table  -->
+          <div class="card-body">
+            <div class="table-responsive table-card">
+              <table class="table text-nowrap mb-0 table-centered table-hover">
+                <thead class="table-light">
+                  <tr>
+                    <th>Name</th>
+
+                    <th>Members</th>
+                    <th>action</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for course_list in courses %}
+
+
+
+
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+
+                        <div class="ms-3 lh-1">
+                          <h5 class="mb-1"><a href="{% url 'userList' course_list.id %}"
+                              class="text-inherit">{{course_list.name}}</a></h5>
+                        </div>
+                      </div>
+                    </td>
+
+
+                    <td>
+                      <div class="avatar-group">
+
+                        <span class="avatar avatar-sm avatar-primary">
+                          <span class="avatar-initials rounded-circle fs-6">{{course_list.num_user}}</span>
+                        </span>
+                      </div>
+                    </td>
+
+                    <td>
+
+                      <a href="{% url 'userList' course_list.id %}">
+                        <i class="icon-xs" data-feather="eye"></i> </a>
+
+
+                    </td>
+
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- card footer  -->
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+</div>
+</div>
+
+
+<!-- Modal for Creating Cohort -->
+
+
+
+{% endblock content %}
+
+
+<script>
+  console.log('testing for all')
+</script>

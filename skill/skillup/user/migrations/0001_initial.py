@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
                 ('date_joined', models.DateTimeField(default=django.utils.timezone.now, verbose_name='date joined')),
                 ('email', models.EmailField(max_length=200, unique=True)),
                 ('username', models.CharField(max_length=20, unique=True)),
-                ('dp_no', models.CharField(default=user.models.generate_otp, max_length=200, unique=True)),
+                ('dp_no', models.CharField( max_length=200, unique=True)),
                 ('full_name', models.CharField(max_length=200)),
                 ('phone', models.CharField(max_length=200)),
                 ('is_verify', models.BooleanField(default=False)),

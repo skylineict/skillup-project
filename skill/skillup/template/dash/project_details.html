@@ -1,0 +1,218 @@
+{% extends "dash/header.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+
+<!-- page content -->
+<div id="app-content">
+
+    <div class="app-content-area">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-xl-8 col-12">
+                  <div class="row">
+                    <div class="col-12 mb-5">
+                      <div class="card">
+                        <div class="card-header ">
+                          <div class="d-flex justify-content-between
+                        align-items-center">
+                            <div>
+                              <h4 class="mb-0">{{project.project_name}}</h4>
+                            </div>
+                            <!-- dropdown  -->
+                            <div>
+                         
+                            </div>
+                          </div>
+    
+    
+                        </div>
+                        <div class="card-body">
+                          <p>{{project.description|safe}} </p>
+    
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item px-0">
+                              <div class="d-flex justify-content-between
+                                align-items-center">
+                                <div class="d-flex align-items-center">
+    
+                                  <div>
+                                    <h5 class="mb-0 ">Start Date</h5>
+                                  </div>
+                                </div>
+                                <div>
+                                  <div>
+                                    <p class="text-dark mb-0
+                                        ">{{project.start_date | date:"d M,Y"}}</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="list-group-item px-0">
+                              <div class="d-flex justify-content-between
+                                align-items-center">
+                                <div class="d-flex align-items-center">
+    
+                                  <div>
+                                    <h5 class="mb-0 ">Due Date</h5>
+                                  </div>
+                                </div>
+                                <div>
+                                  <div>
+                                    <p class="text-dark mb-0
+                                        ">{{project.end_date | date:"d M,Y"}}</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="list-group-item  px-0">
+                              <div class="d-flex justify-content-between
+                            align-items-center">
+                               
+                                
+                              </div>
+                            </li>
+                            <li class="list-group-item px-0 pb-0">
+                              <div class="d-flex
+                              justify-content-between
+                              align-items-center">
+                                <div class="d-flex
+                                align-items-center">
+    
+                                  <div>
+                                    <h5 class="mb-0 ">Expected Score</h5>
+                                  </div>
+                                </div>
+                                <div>
+                                  <div>
+                                    <p class="text-dark mb-0
+                                      ">{{project.task_required_score}}%</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+    
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+    
+                  
+                  </div>
+    
+                </div>
+                <div class="col-md-12 col-xl-4 col-12">
+                  <!-- card  -->
+                  <div class="card mb-5 bg-primary ">
+                    <!-- card body  -->
+                    <div class="card-body">
+    
+                      <h4 class="mb-0 text-white">Project Expires on </h4>
+    
+                      <!-- dropdown  -->
+                      <div class="d-flex justify-content-between align-items-center mt-8">
+                        <div>
+                            <h3 class="display-5 fw-bold text-white mb-1"  data-enddate="{{ project.end_date|date:'Y-m-d H:i:s' }}" id="countdown" >Loading...</h3>
+                          <p class="mb-0 text-white">{{ project.end_date|date:"d F, Y" }}</p>
+                        </div>
+                       
+                      </div>
+    
+                    </div>
+    
+                  </div>
+                
+                  <div class="card">
+                    <!-- Card header -->
+
+                    {% if  project.end_date <= 0 %}
+                      
+               
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <div>
+                        <h4 class="mb-0">No current Project
+                        </h4>
+                      </div>
+                     
+                    </div>
+                    {% else %}
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <div>
+                        <h4 class="mb-0">Project Completed
+                        </h4>
+                      </div>
+                      <div><a href="#!" class="btn btn-primary btn-sm">Submit Now</a></div>
+                    </div>
+                    {% endif %}
+                    <!-- Card body -->
+                  
+                  </div>
+                </div>
+              </div>
+
+
+<style>
+    .con{
+        width: 90%;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 0 auto;
+    
+    
+
+    }
+</style> 
+            
+
+              
+         
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    {% comment %} document.addEventListener('DOMContentLoaded', function () {
+        Swal.fire({
+            title: '<h5><span style="color: #7066e0;">Admission is in process.</span> <br> Please register for your course before you are admitted.</h5>',
+            icon: 'success', // You can use 'info', 'warning', 'error', or a custom icon as needed
+            // imageUrl: 'https://obidientstechspace.com/flyer.jpg',
+            // imageWidth: 400,
+            // imageHeight: 400,
+            html: '<a href="#" class="btn" style="background-color: #25D366; color: white; padding: 7px 10px; text-decoration: none; border-radius: 5px;"><i class="fab fa-whatsapp" style="margin-right: 5px;"></i>Join Community</a> ' +
+                  '<a href="https://meet.google.com/wsw-cbme-ncm" class="btn" style="background-color: #7066e0; color: white; padding: 7px 10px; text-decoration: none; border-radius: 5px; font-size: 15px;"><i class="fas fa-graduation-cap" style="margin-right: 5px;"></i>Register Course</a>',
+            imageAlt: 'Success icon',
+            confirmButtonText: 'Cancel',
+        });
+    }); {% endcomment %}
+
+    document.addEventListener('DOMContentLoaded', function () {
+        Swal.fire({
+            title: '<h2><span style="color: #7066e0;">Screening Notification</h2> </span> <h5>the following applicant has been selected for a physical  screening on Thursday, August 8, 2024, at 10:00 AM. <br/>Venue: <br> <strong>BOI-RSU Innovation Hub <br/> Faculty of Management Science Rivers state university.</h5>',
+            icon: 'success', // You can use 'info', 'warning', 'error', or a custom icon as needed
+            // imageUrl: 'https://obidientstechspace.com/flyer.jpg',
+            // imageWidth: 400,
+            // imageHeight: 400,
+            html: 
+                  '<a href="https://obidientstechspace.com/interview.pdf" class="btn" style="background-color: #7066e0; color: white; padding: 7px 10px; text-decoration: none; border-radius: 5px; font-size: 15px;"><i class="fas fa-graduation-cap" style="margin-right: 5px;"></i>View applicant</a>',
+            imageAlt: 'Success icon',
+            confirmButtonText: 'Cancel',
+        });
+    });
+</script>
+
+
+
+{% endblock content %}
+

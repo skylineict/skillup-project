@@ -30350,7 +30350,7 @@ a {
 }
 
 .dropdown-item {
-    color: #ffffff !important;
+    color: #000000 !important;
     font-size: .875rem;
     font-weight: 500;
     line-height: 28px;

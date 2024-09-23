@@ -19,7 +19,7 @@ def send_otp(email):
     otp = generate_otp()
     user = User.objects.get(email=email)
     user.otp = otp
-    user.is_otp_expired = timezone.now()  # Record the timestamp when OTP was sent
+    user.otp_sent_at = timezone.now()  # Record the timestamp when OTP was sent
     user.save()
     body = f"Hi {user.username}, your OTP verification code is: {otp}. This code expires in two hours."
     email_from = settings.EMAIL_HOST_USER
@@ -30,7 +30,7 @@ def send_otp(email):
 def send_user(email):
     subject = "Welcome to Skill-RSU"
     user = User.objects.get(email=email)
-    body = f"Hi {user.username},You are just a few steps away \n Below is your dept No:{user.dp_no}. \n   . Use it to log in to your account with your password. \n "
+    body = f"Hi {user.username}, account created! \n You are just a few steps away \n Below is your dept ID:{user.dp_no}. \n   . Use it to log in to your account with your password. \n "
     email_from = settings.EMAIL_HOST_USER
     email_sent = EmailMessage(subject=subject, from_email=email_from, body=body, to=[email])
     email_sent.send(fail_silently=True)

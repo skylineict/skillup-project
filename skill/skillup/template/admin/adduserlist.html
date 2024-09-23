@@ -1,0 +1,121 @@
+{% extends "admin/header.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+
+<!-- page content -->
+<div id="app-content">
+
+  <div class="app-content-area">
+
+    <div class="container-fluid">
+
+
+
+
+      <div class="row">
+        <div class="col-12">
+          <!-- card -->
+          <div class="card mb-4">
+            <div class="card-header">
+              <div class="row g-2">
+                <div class="col-lg-4 col-md-5 d-grid d-lg-block">
+                  <button class="btn btn-primary" id="add-to-cohort-btn">Add to Cohort</button>
+                </div>
+                <div class="col-md-7 col-lg-3" >
+                  <input type="search" class="form-control w-100" id="search-input" placeholder="Search">
+                </div>
+
+                <div class="col-lg-4 d-flex">
+                  <select class="form-select" id="selectcourseid">
+                   
+                  </select>
+                  
+
+                  <select class="form-select" id="selectcohortid">
+                   
+                  </select>
+
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive table-card">
+                <table class="table text-nowrap mb-0 table-centered">
+                  <thead class="table-light">
+                    <tr>
+                      <th class="pe-0">
+                        <!-- <div class="form-check">
+                          <input class="form-check-input" id="checkAll" type="checkbox" value="">
+                          <label class="form-check-label" for="checkAll">
+                          </label>
+                        </div> -->
+                      </th>
+                      <th class="ps-0">passcode</th>
+
+                      <th>Full name</th>
+                      <th>courses</th>
+                      <th>Email</th>
+                      <th>date</th>
+                      <th>department</th>
+
+                    </tr>
+                  </thead>
+                  <tbody  id="add-student">
+                  
+
+
+
+
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="card-footer d-md-flex justify-content-between align-items-center ">
+              <span>Showing 1 to 8 of 12 entries</span>
+              <nav class="mt-2 mt-md-0">
+                <ul class="pagination mb-0 ">
+                  <li class="page-item">
+                    <a class="page-link" href="#!">Previous</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link active" href="#!">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#!">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#!">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#!">Next</a>
+                  </li>
+                </ul>
+
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock content %}
+
+
+<script>
+  console.log('testing for all')
+</script>

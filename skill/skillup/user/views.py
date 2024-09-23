@@ -1,10 +1,9 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View
 from django.http import JsonResponse
-from .models import User,Profile, Faculty
+from .models import User,Profile, Faculty,CourseList
 from .ots_email import send_otp, send_user
 from django.contrib.auth import authenticate,login
-from .models import generate_otp
 from django.contrib.auth.mixins import LoginRequiredMixin
 import pdb
 from django.urls import reverse
@@ -39,15 +38,16 @@ class Register(View):
             
             if User.objects.filter(email=email).exists():
                 return JsonResponse({"error": "Email is already registered"}, status=400)
-            dp_no = generate_otp()
+            # dp_no = generate_otp()
             user = User.objects.create(username=username,
                                        email=email,
                                        full_name=full_name,
                                        phone=phone,
-                                       dp_no=dp_no)
+                                       dp_no=username)
             user.set_password(password)
             user.save()
             send_otp(email)
+            send_user(user.email)
             return JsonResponse({"success": "Registration successful. Redirecting..."}, status=200)
     
 
@@ -81,7 +81,7 @@ class Email_verification(View):
           
         #   Profile.objects.create(user=user)
           Profile.objects.get_or_create(user=user)
-          send_user(user.email)
+         
           return JsonResponse({"success": "Email Verify successfuly"},status=200)
      
 
@@ -113,7 +113,11 @@ class Login(View):
            
               # Redirect to profile completion page if profile doesn't exist
         if user:
-            login(request, user)
+            if user.is_staff:
+                  login(request, user)
+                  return JsonResponse({'admin': "Login To Admin redrecting....."},status=200) 
+            else:
+                login(request, user)
             return JsonResponse({'success': "Login redrecting....."},status=200) 
 
         
@@ -135,10 +139,12 @@ class Profiles(LoginRequiredMixin,View):
             pass
 
         faculties = Faculty.objects.all()
+        courses = CourseList.objects.all()
         login_user = request.user
         context = {
             'faculties': faculties,
-            'login_user': login_user
+            'login_user': login_user,
+            'courses':courses
 
 
         }
@@ -148,6 +154,7 @@ class Profiles(LoginRequiredMixin,View):
     
     def post(self,request):
             faculty_name = request.POST['faculty']
+            courses = request.POST['courses']
             department = request.POST['department']
             level = request.POST['level']
             state = request.POST['state']
@@ -165,6 +172,8 @@ class Profiles(LoginRequiredMixin,View):
          
             if not faculty_name:
                 return JsonResponse({"error": "Faculty is required"}, status=400)
+            if not courses:
+                return JsonResponse({"error": "course is required"}, status=400)
             if not department:
                 return JsonResponse({"error": "Department is required"}, status=400)
             if not state:
@@ -177,6 +186,7 @@ class Profiles(LoginRequiredMixin,View):
                 return JsonResponse({"error": "picture  is required"}, status=400)
             try:
                 faculty = Faculty.objects.get(name=faculty_name)
+                course = CourseList.objects.get(name=courses)
                 # pdb.set_trace()
             except Faculty.DoesNotExist:
                 return JsonResponse({"error": f"Faculty with name '{faculty_name}' does not exist"}, status=400)
@@ -189,6 +199,7 @@ class Profiles(LoginRequiredMixin,View):
             updateprofile.level = level
             updateprofile.state =state
             updateprofile.image = profile_pic
+            updateprofile.course =course
             print(profile_pic)
             updateprofile.save()
             # return render(request, "user/profile.html")

@@ -1,0 +1,1278 @@
+{% extends "admin/header.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+<!-- page content -->
+<div id="app-content">
+
+    <div class="app-content-area">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                  <!-- card -->
+                  <div class="card mb-4">
+                    <div class="card-header">
+                      <div class="row g-2">
+                        <div class="col-lg-6 col-md-5 d-grid d-lg-block">
+                          <a
+                            href="invoice-generator.html"
+                            class="btn btn-primary"
+
+                            >+ Create New Invoice</a
+                          >
+                        </div>
+                        <div class="col-md-7 col-lg-4">
+                          <input
+                            type="search"
+                            class="form-control w-100"
+                            placeholder="Search for Invoice Number, Customer Name"
+                         >
+                        </div>
+                        <div class="col-lg-2 d-flex">
+                          <select class="form-select">
+                            <option selected>Status</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                          <a
+                          href="#!"
+                          class="btn btn-danger-soft  btn-icon ms-2 texttooltip"
+                          data-template="trashOne"
+                        >
+                          <i
+                            data-feather="trash-2"
+                            class="icon-xs"
+                          ></i>
+                          <div id="trashOne" class="d-none">
+                            <span>Delete</span>
+                          </div>
+                        </a>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="table-responsive table-card">
+                        <table class="table text-nowrap mb-0 table-centered">
+                          <thead class="table-light">
+                            <tr>
+                              <th class="pe-0">
+                                <div class="form-check" >
+                                  <input
+                                    class="form-check-input" id="checkAll"
+                                    type="checkbox"
+                                    value=""
+
+                                 >
+                                  <label
+                                    class="form-check-label"
+                                    for="checkAll"
+                                  >
+                                  </label>
+                                </div>
+                              </th>
+                              <th class="ps-0">Invoices</th>
+                              <th>Status</th>
+                              <th>Customer Info</th>
+                              <th>Date</th>
+                              <th>Email</th>
+                              <th>Amount</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="pe-0">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="contactCheckbox2"
+                                 >
+                                  <label
+                                    class="form-check-label"
+                                    for="contactCheckbox2"
+                                  >
+                                  </label>
+                                </div>
+                              </td>
+                              <td class="ps-0">
+                                <a href="#!">#88120</a>
+                              </td>
+                              <td>
+                                <span class="badge badge-warning-soft text-warning"
+                                  >Pending</span
+                                >
+                              </td>
+                              <td class="ps-1">
+                                <div class="d-flex align-items-center">
+                                  <a href="#!"><img
+                                    src="../assets/images/avatar/avatar-11.jpg"
+                                    alt="Image"
+                                    class="avatar avatar-sm rounded-circle"
+                                 ></a>
+                                  <div class="ms-2">
+                                    <h5 class="mb-0"> <a href="#!" class="text-inherit">Jan Harmon</a></h5>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>19 Apr 2023</td>
+
+                              <td>michaelbaggett@dayrep.com</td>
+                              <td>$35.99</td>
+                              <td>
+                                <div>
+                                  <div class="dropdown">
+                                    <a
+                                      class="btn btn-ghost btn-icon btn-sm rounded-circle"
+                                      href="#!"
+                                      role="button"
+                                      data-bs-toggle="dropdown"
+                                      aria-expanded="false"
+                                    >
+                                      <i
+                                        data-feather="more-vertical"
+                                        class="icon-xs"
+                                      ></i>
+                                    </a>
+
+                                    <div class="dropdown-menu">
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="eye"
+
+                                          ></i
+                                          >View
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="edit"
+
+                                          ></i
+                                          >Edit
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="download"
+
+                                          ></i
+                                          >Download
+                                        </a>
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="trash-2"
+
+                                          ></i
+                                          >Delete
+                                        </a>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pe-0">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="contactCheckbox3"
+                                 >
+                                  <label
+                                    class="form-check-label"
+                                    for="contactCheckbox3"
+                                  >
+                                  </label>
+                                </div>
+                              </td>
+                              <td class="ps-0">
+                                <a href="#!">#88119</a>
+                              </td>
+                              <td>
+                                <span class="badge badge-success-soft text-success"
+                                  >Paid</span
+                                >
+                              </td>
+                              <td class="ps-1">
+                                <div class="d-flex align-items-center">
+                                  <a href="#!"> <img
+                                    src="../assets/images/avatar/avatar-2.jpg"
+                                    alt="Image"
+                                    class="avatar avatar-sm rounded-circle"
+                                 ></a>
+                                  <div class="ms-2">
+                                    <h5 class="mb-0"> <a href="#!" class="text-inherit">Helen Mullins</a></h5>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>18 Apr 2023</td>
+
+                              <td>helenmullins@dayrep.com</td>
+                              <td>$135.99</td>
+                              <td>
+                                <div>
+                                  <div class="dropdown">
+                                    <a
+                                      class="btn btn-ghost btn-icon btn-sm rounded-circle"
+                                      href="#!"
+                                      role="button"
+                                      data-bs-toggle="dropdown"
+                                      aria-expanded="false"
+                                    >
+                                      <i
+                                        data-feather="more-vertical"
+                                        class="icon-xs"
+                                      ></i>
+                                    </a>
+
+                                    <div class="dropdown-menu">
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="eye"
+
+                                          ></i
+                                          >View
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="edit"
+
+                                          ></i
+                                          >Edit
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="download"
+
+                                          ></i
+                                          >Download
+                                        </a>
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="trash-2"
+
+                                          ></i
+                                          >Delete
+                                        </a>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pe-0">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="contactCheckbox12"
+                                 >
+                                  <label
+                                    class="form-check-label"
+                                    for="contactCheckbox12"
+                                  >
+                                  </label>
+                                </div>
+                              </td>
+                              <td class="ps-0">
+                                <a href="#!">#88118</a>
+                              </td>
+                              <td>
+                                <span class="badge badge-success-soft text-success"
+                                  >Paid</span
+                                >
+                              </td>
+                              <td class="ps-1">
+                                <div class="d-flex align-items-center">
+                                  <a href="#!"><img
+                                    src="../assets/images/avatar/avatar-3.jpg"
+                                    alt="Image"
+                                    class="avatar avatar-sm rounded-circle"
+                                 ></a>
+                                  <div class="ms-2">
+                                    <h5 class="mb-0"> <a href="#!" class="text-inherit">Agnes Addison</a></h5>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>16 Apr 2023</td>
+
+                              <td>agnesaddison@gmail.com</td>
+                              <td>$235.99</td>
+                              <td>
+                                <div>
+                                  <div class="dropdown">
+                                    <a
+                                      class="btn btn-ghost btn-icon btn-sm rounded-circle"
+                                      href="#!"
+                                      role="button"
+                                      data-bs-toggle="dropdown"
+                                      aria-expanded="false"
+                                    >
+                                      <i
+                                        data-feather="more-vertical"
+                                        class="icon-xs"
+                                      ></i>
+                                    </a>
+
+                                    <div class="dropdown-menu">
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="eye"
+
+                                          ></i
+                                          >View
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="edit"
+
+                                          ></i
+                                          >Edit
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="download"
+
+                                          ></i
+                                          >Download
+                                        </a>
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="trash-2"
+
+                                          ></i
+                                          >Delete
+                                        </a>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pe-0">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="contactCheckbox4"
+                                 >
+                                  <label
+                                    class="form-check-label"
+                                    for="contactCheckbox4"
+                                  >
+                                  </label>
+                                </div>
+                              </td>
+                              <td class="ps-0">
+                                <a href="#!">#88117</a>
+                              </td>
+                              <td>
+                                <span class="badge badge-success-soft text-success"
+                                  >Paid</span
+                                >
+                              </td>
+                              <td class="ps-1">
+                                <div class="d-flex align-items-center">
+                                  <a href="#!"><img
+                                    src="../assets/images/avatar/avatar-4.jpg"
+                                    alt="Image"
+                                    class="avatar avatar-sm rounded-circle"
+                                 ></a>
+                                  <div class="ms-2">
+                                    <h5 class="mb-0"> <a href="#!" class="text-inherit">Justin Holtz</a></h5>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>16 Apr 2023</td>
+
+                              <td>justinholtz@gmail.com</td>
+                              <td>$235.23</td>
+                              <td>
+                                <div>
+                                  <div class="dropdown">
+                                    <a
+                                      class="btn btn-ghost btn-icon btn-sm rounded-circle"
+                                      href="#!"
+                                      role="button"
+                                      data-bs-toggle="dropdown"
+                                      aria-expanded="false"
+                                    >
+                                      <i
+                                        data-feather="more-vertical"
+                                        class="icon-xs"
+                                      ></i>
+                                    </a>
+
+                                    <div class="dropdown-menu">
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="eye"
+
+                                          ></i
+                                          >View
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="edit"
+
+                                          ></i
+                                          >Edit
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="download"
+
+                                          ></i
+                                          >Download
+                                        </a>
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="trash-2"
+
+                                          ></i
+                                          >Delete
+                                        </a>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pe-0">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="contactCheckbox5"
+                                 >
+                                  <label
+                                    class="form-check-label"
+                                    for="contactCheckbox5"
+                                  >
+                                  </label>
+                                </div>
+                              </td>
+                              <td class="ps-0">
+                                <a href="#!">#88116</a>
+                              </td>
+                              <td>
+                                <span class="badge badge-success-soft text-success"
+                                  >Paid</span
+                                >
+                              </td>
+                              <td class="ps-1">
+                                <div class="d-flex align-items-center">
+                                  <a href="#!"><img
+                                    src="../assets/images/avatar/avatar-5.jpg"
+                                    alt="Image"
+                                    class="avatar avatar-sm rounded-circle"
+                                 ></a>
+                                  <div class="ms-2">
+                                    <h5 class="mb-0"> <a href="#!" class="text-inherit">Lamont Laurel</a></h5>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>15 Apr 2023</td>
+
+                              <td>lamontlaurel@gmail.com</td>
+                              <td>$789.18</td>
+                              <td>
+                                <div>
+                                  <div class="dropdown">
+                                    <a
+                                      class="btn btn-ghost btn-icon btn-sm rounded-circle"
+                                      href="#!"
+                                      role="button"
+                                      data-bs-toggle="dropdown"
+                                      aria-expanded="false"
+                                    >
+                                      <i
+                                        data-feather="more-vertical"
+                                        class="icon-xs"
+                                      ></i>
+                                    </a>
+
+                                    <div class="dropdown-menu">
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="eye"
+
+                                          ></i
+                                          >View
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="edit"
+
+                                          ></i
+                                          >Edit
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="download"
+
+                                          ></i
+                                          >Download
+                                        </a>
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="trash-2"
+
+                                          ></i
+                                          >Delete
+                                        </a>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pe-0">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="contactCheckbox6"
+                                 >
+                                  <label
+                                    class="form-check-label"
+                                    for="contactCheckbox6"
+                                  >
+                                  </label>
+                                </div>
+                              </td>
+                              <td class="ps-0">
+                                <a href="#!">#88115</a>
+                              </td>
+                              <td>
+                                <span class="badge badge-success-soft text-success"
+                                  >Paid</span
+                                >
+                              </td>
+                              <td class="ps-1">
+                                <div class="d-flex align-items-center">
+                                  <a href="#!"><img
+                                    src="../assets/images/avatar/avatar-6.jpg"
+                                    alt="Image"
+                                    class="avatar avatar-sm rounded-circle"
+                                 ></a>
+                                  <div class="ms-2">
+                                    <h5 class="mb-0"> <a href="#!" class="text-inherit">Maria Velez</a></h5>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>15 Apr 2023</td>
+
+                              <td>mariavelez@gmail.com</td>
+                              <td>$35.99</td>
+                              <td>
+                                <div>
+                                  <div class="dropdown">
+                                    <a
+                                      class="btn btn-ghost btn-icon btn-sm rounded-circle"
+                                      href="#!"
+                                      role="button"
+                                      data-bs-toggle="dropdown"
+                                      aria-expanded="false"
+                                    >
+                                      <i
+                                        data-feather="more-vertical"
+                                        class="icon-xs"
+                                      ></i>
+                                    </a>
+
+                                    <div class="dropdown-menu">
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="eye"
+
+                                          ></i
+                                          >View
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="edit"
+
+                                          ></i
+                                          >Edit
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="download"
+
+                                          ></i
+                                          >Download
+                                        </a>
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="trash-2"
+
+                                          ></i
+                                          >Delete
+                                        </a>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pe-0">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="contactCheckbox7"
+                                 >
+                                  <label
+                                    class="form-check-label"
+                                    for="contactCheckbox7"
+                                  >
+                                  </label>
+                                </div>
+                              </td>
+                              <td class="ps-0">
+                                <a href="#!">#88114</a>
+                              </td>
+                              <td>
+                                <span class="badge badge-danger-soft text-danger"
+                                  >Refunded</span
+                                >
+                              </td>
+                              <td class="ps-1">
+                                <div class="d-flex align-items-center">
+                                  <a href="#!"><img
+                                    src="../assets/images/avatar/avatar-7.jpg"
+                                    alt="Image"
+                                    class="avatar avatar-sm rounded-circle"
+                                 ></a>
+                                  <div class="ms-2">
+                                    <h5 class="mb-0"> <a href="#!" class="text-inherit">Marty Perez</a></h5>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>14 Apr 2023</td>
+
+                              <td>martyperez@gmail.com</td>
+                              <td>$135.99</td>
+                              <td>
+                                <div>
+                                  <div class="dropdown">
+                                    <a
+                                      class="btn btn-ghost btn-icon btn-sm rounded-circle"
+                                      href="#!"
+                                      role="button"
+                                      data-bs-toggle="dropdown"
+                                      aria-expanded="false"
+                                    >
+                                      <i
+                                        data-feather="more-vertical"
+                                        class="icon-xs"
+                                      ></i>
+                                    </a>
+
+                                    <div class="dropdown-menu">
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="eye"
+
+                                          ></i
+                                          >View
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="edit"
+
+                                          ></i
+                                          >Edit
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="download"
+
+                                          ></i
+                                          >Download
+                                        </a>
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="trash-2"
+
+                                          ></i
+                                          >Delete
+                                        </a>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pe-0">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="contactCheckbox8"
+                                 >
+                                  <label
+                                    class="form-check-label"
+                                    for="contactCheckbox8"
+                                  >
+                                  </label>
+                                </div>
+                              </td>
+                              <td class="ps-0">
+                                <a href="#!">#88113</a>
+                              </td>
+                              <td>
+                                <span class="badge badge-warning-soft text-warning"
+                                  >Pending</span
+                                >
+                              </td>
+                              <td class="ps-1">
+                                <div class="d-flex align-items-center">
+                                  <a href="#!"><img
+                                    src="../assets/images/avatar/avatar-8.jpg"
+                                    alt="Image"
+                                    class="avatar avatar-sm rounded-circle"
+                                 ></a>
+                                  <div class="ms-2">
+                                    <h5 class="mb-0"> <a href="#!" class="text-inherit">Edgar Elliot</a></h5>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>14 Apr 2023</td>
+
+                              <td>edgarelliott@dayrep.com</td>
+                              <td>$490.00</td>
+                              <td>
+                                <div>
+                                  <div class="dropdown">
+                                    <a
+                                      class="btn btn-ghost btn-icon btn-sm rounded-circle"
+                                      href="#!"
+                                      role="button"
+                                      data-bs-toggle="dropdown"
+                                      aria-expanded="false"
+                                    >
+                                      <i
+                                        data-feather="more-vertical"
+                                        class="icon-xs"
+                                      ></i>
+                                    </a>
+
+                                    <div class="dropdown-menu">
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="eye"
+
+                                          ></i
+                                          >View
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="edit"
+
+                                          ></i
+                                          >Edit
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="download"
+
+                                          ></i
+                                          >Download
+                                        </a>
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="trash-2"
+
+                                          ></i
+                                          >Delete
+                                        </a>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pe-0">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="contactCheckbox9"
+                                 >
+                                  <label
+                                    class="form-check-label"
+                                    for="contactCheckbox9"
+                                  >
+                                  </label>
+                                </div>
+                              </td>
+                              <td class="ps-0">
+                                <a href="#!">#88112</a>
+                              </td>
+                              <td>
+                                <span class="badge badge-success-soft text-success"
+                                  >Paid</span
+                                >
+                              </td>
+                              <td class="ps-1">
+                                <div class="d-flex align-items-center">
+                                  <a href="#!"><img
+                                    src="../assets/images/avatar/avatar-9.jpg"
+                                    alt="Image"
+                                    class="avatar avatar-sm rounded-circle"
+                                 ></a>
+                                  <div class="ms-2">
+                                    <h5 class="mb-0"> <a href="#!" class="text-inherit">Debra Montoya</a></h5>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>13 Apr 2023</td>
+
+                              <td>debramontoya@teleworm.us</td>
+                              <td>$49.00</td>
+                              <td>
+                                <div>
+                                  <div class="dropdown">
+                                    <a
+                                      class="btn btn-ghost btn-icon btn-sm rounded-circle"
+                                      href="#!"
+                                      role="button"
+                                      data-bs-toggle="dropdown"
+                                      aria-expanded="false"
+                                    >
+                                      <i
+                                        data-feather="more-vertical"
+                                        class="icon-xs"
+                                      ></i>
+                                    </a>
+
+                                    <div class="dropdown-menu">
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="eye"
+
+                                          ></i
+                                          >View
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="edit"
+
+                                          ></i
+                                          >Edit
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="download"
+
+                                          ></i
+                                          >Download
+                                        </a>
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="trash-2"
+
+                                          ></i
+                                          >Delete
+                                        </a>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pe-0">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="contactCheckbox10"
+                                 >
+                                  <label
+                                    class="form-check-label"
+                                    for="contactCheckbox10"
+                                  >
+                                  </label>
+                                </div>
+                              </td>
+                              <td class="ps-0">
+                                <a href="#!">#88111</a>
+                              </td>
+                              <td>
+                                <span class="badge badge-success-soft text-success"
+                                  >Paid</span
+                                >
+                              </td>
+                              <td class="ps-1">
+                                <div class="d-flex align-items-center">
+                                  <a href="#!"><img
+                                    src="../assets/images/avatar/avatar-10.jpg"
+                                    alt="Image"
+                                    class="avatar avatar-sm rounded-circle"
+                                 ></a>
+                                  <div class="ms-2">
+                                    <h5 class="mb-0"> <a href="#!" class="text-inherit">Lonnie Gordon</a></h5>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>13 Apr 2023</td>
+
+                              <td>lonniegordon@jourrapide.com</td>
+                              <td>$149.00</td>
+                              <td>
+                                <div>
+                                  <div class="dropdown">
+                                    <a
+                                      class="btn btn-ghost btn-icon btn-sm rounded-circle"
+                                      href="#!"
+                                      role="button"
+                                      data-bs-toggle="dropdown"
+                                      aria-expanded="false"
+                                    >
+                                      <i
+                                        data-feather="more-vertical"
+                                        class="icon-xs"
+                                      ></i>
+                                    </a>
+
+                                    <div class="dropdown-menu">
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="eye"
+
+                                          ></i
+                                          >View
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="edit"
+
+                                          ></i
+                                          >Edit
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="download"
+
+                                          ></i
+                                          >Download
+                                        </a>
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="trash-2"
+
+                                          ></i
+                                          >Delete
+                                        </a>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pe-0">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="contactCheckbox11"
+                                 >
+                                  <label
+                                    class="form-check-label"
+                                    for="contactCheckbox11"
+                                  >
+                                  </label>
+                                </div>
+                              </td>
+                              <td class="ps-0">
+                                <a href="#!">#88110</a>
+                              </td>
+                              <td>
+                                <span class="badge badge-success-soft text-success"
+                                  >Paid</span
+                                >
+                              </td>
+                              <td class="ps-1">
+                                <div class="d-flex align-items-center">
+                                  <a href="#!"><img
+                                    src="../assets/images/avatar/avatar-11.jpg"
+                                    alt="Image"
+                                    class="avatar avatar-sm rounded-circle"
+                                 ></a>
+                                  <div class="ms-2">
+                                    <h5 class="mb-0"> <a href="#!" class="text-inherit">Alison Romaine</a></h5>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>13 Apr 2023</td>
+
+                              <td>alisonromaine@dayrep.com</td>
+                              <td>$129.00</td>
+                              <td>
+                                <div>
+                                  <div class="dropdown">
+                                    <a
+                                      class="btn btn-ghost btn-icon btn-sm rounded-circle"
+                                      href="#!"
+                                      role="button"
+                                      data-bs-toggle="dropdown"
+                                      aria-expanded="false"
+                                    >
+                                      <i
+                                        data-feather="more-vertical"
+                                        class="icon-xs"
+                                      ></i>
+                                    </a>
+
+                                    <div class="dropdown-menu">
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="eye"
+
+                                          ></i
+                                          >View
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="edit"
+
+                                          ></i
+                                          >Edit
+                                        </a>
+
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="download"
+
+                                          ></i
+                                          >Download
+                                        </a>
+
+
+                                        <a class="dropdown-item d-flex align-items-center" href="#!">
+                                          <i
+                                            class="me-2 icon-xs"
+                                            data-feather="trash-2"
+
+                                          ></i
+                                          >Delete
+                                        </a>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    <div
+                      class="card-footer d-md-flex justify-content-between align-items-center "
+                    >
+                      <span>Showing 1 to 8 of 12 entries</span>
+                      <nav class="mt-2 mt-md-0">
+                        <ul class="pagination mb-0 ">
+                          <li class="page-item">
+                            <a class="page-link" href="#!">Previous</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#!">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#!">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#!">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#!">Next</a>
+                          </li>
+                          </ul>
+
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock content %}

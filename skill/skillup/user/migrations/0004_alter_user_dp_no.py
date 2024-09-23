@@ -14,6 +14,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='user',
             name='dp_no',
-            field=models.CharField(default=user.models.generate_otp, editable=False, max_length=200, unique=True),
+            field=models.CharField(editable=False, max_length=200, unique=True),
         ),
     ]

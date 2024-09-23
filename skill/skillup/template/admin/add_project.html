@@ -1,0 +1,125 @@
+{% extends "admin/header.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+
+<!-- page content -->
+<div id="app-content">
+
+  <div class="app-content-area">
+
+    <div class="container-fluid  ">
+
+
+      <div class="row centered-row">
+        <div class="col-lg-12 col-md-12 col-12">
+          <!-- Page header -->
+          <div class="mb-5">
+            <h3 class="mb-0 ">Create new project</h3>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div>
+        <!-- row -->
+        <style>
+          .mb-4 {
+            margin-bottom: 7rem !important;
+          }
+
+          .ck-editor__editable{
+            height: 300px;   
+          }
+
+
+      
+          @media (min-width: 992px) {
+            .centered-row {
+              width: 70%;
+              margin: 0 auto;
+            }
+          }
+        </style>
+      <form action="" method="post" id="projectform">
+        {% csrf_token %}
+        
+        <div class="row centered-row">
+          <div class="col-xl-12 col-md-12 col-12">
+            <!-- card -->
+            <div class="card mb-5">
+              <!-- card body -->
+              <div class="card-body">
+                <!-- form -->
+                <div class="row">
+                  <!-- form group -->
+                  <div class="mb-4 col-12">
+                    <label class="form-label">Name <span class="text-danger"></span></label>
+                    <input type="text" class="form-control" name="project_name" placeholder="Enter project title">
+                  </div>
+                  <!-- form group -->
+                 <!-- Description with CKEditor -->
+                 <div class="mb-4 col-12" id="editor-container">
+                  <label class="form-label">Description</label>
+                  <textarea id="myeditor" class="form-control" name="description" placeholder="Type something here"></textarea>
+              </div>
+                  <!-- form group -->
+                  <div class="mb-4 col-md-6 col-12 date">
+                    <label class="form-label">Start Date <span class="text-danger">*</span></label>
+                    <div class="input-group me-3 flatpickr rounded">
+                      <input class="form-control" name="start_date" type="datetime-local" placeholder="Select Date" >
+                      <span class="input-group-text text-muted" id="basic-addon2"><i data-feather="calendar" class="icon-xxs"></i></span>
+                    </div>
+                  </div>
+                  <!-- form group -->
+                  <div class="mb-5 col-md-6 col-12 date">
+                    <label class="form-label">End Date <span class="text-danger">*</span></label>
+                    <div class="input-group me-3 flatpickr rounded">
+                      <input class="form-control" name="end_date" type="datetime-local" placeholder="Select Date">
+                      <span class="input-group-text text-muted" id="basic-addon2"><i data-feather="calendar" class="icon-xxs"></i></span>
+                    </div>
+                  </div>
+                  <!-- form group -->
+                  <div class="mb-5 col-12">
+                    <label class="form-label">Required Score<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="score" placeholder="Enter required score">
+                  </div>
+      
+                  <!-- Cohorts -->
+                  <div class="mb-4 col-12">
+                   
+      
+                  
+                    {% for cohort in cohorts %}
+                    <input class="form-check-input" type="checkbox" name="cohorts" value="{{cohort.id}}" id="contactCheckbox3">
+                    <label class="form-check-label" for="contactCheckbox3">{{cohort.name}}</label>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="mt-4 d-flex justify-content-center">
+              <button type="submit" class="btn btn-primary btn-lg me-2" id="projectbtn">
+                <span id="btntext">Create Project</span>
+                <span class="spinner-border  text-white  " id="spinner" role="status" aria-hidden="true"
+                        style="display:none;"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock content %}

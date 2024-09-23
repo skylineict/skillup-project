@@ -1,0 +1,339 @@
+{% extends "dash/header.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+
+<!-- page content -->
+<div id="app-content">
+
+    <div class="app-content-area">
+
+        <div class=" pt-10 pb-21 mt-n6 mx-n4 bg-profile"></div>
+
+        <style>
+            .bg-profile {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('{% static "img/project_banner.JPG" %}');
+
+
+            }
+        </style>
+        <div class="container-fluid mt-n22">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                    <!-- Page header -->
+                    <div class="d-flex justify-content-between align-items-center mb-5">
+                        <div class="mb-2 mb-lg-0">
+                            <h3 class="mb-0 text-white"> Project Statistics </h3>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-6 col-md-12 col-12 mb-5">
+                    <!-- card -->
+                    <div class="card h-100 card-lift">
+                        <!-- card body -->
+                        <div class="card-body">
+                            <!-- heading -->
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <h4 class="mb-0">Current Score</h4>
+                                </div>
+
+                            </div>
+                            <!-- project number -->
+                            <div class="lh-1">
+                                <h1 class="mb-1 fw-bold">30%</h1>
+                                <p class="mb-0">
+                                    <span class="text-dark me-2">2 project</span>
+                                    Completed
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-12 col-12 mb-5">
+                    <!-- card -->
+                    <div class="card h-100 card-lift">
+                        <!-- card body -->
+                        <div class="card-body">
+                            <!-- heading -->
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <h4 class="mb-0"> Requisite score </h4>
+                                </div>
+
+                            </div>
+                            <!-- project number -->
+                            <div class="lh-1">
+                                <h1 class="mb-1 fw-bold">60%</h1>
+                                <p class="mb-0">
+                                    <span class="text-dark me-2"></span>
+                                    July
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-12 col-12 mb-5">
+                    <!-- card -->
+                    <div class="card h-100 card-lift">
+                        <!-- card body -->
+                        <div class="card-body">
+                            <!-- heading -->
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <h4 class="mb-0">Cohort Performance</h4>
+                                </div>
+
+                            </div>
+                            <!-- project number -->
+                            <div class="lh-1">
+                                <h1 class="mb-1 fw-bold">10%</h1>
+                                <p class="mb-0">
+                                    <span class="text-dark me-2">weekly</span>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- row  -->
+            <div class="row">
+                <div class="col-xl-12 col-12 mb-5">
+                    <!-- card  -->
+                    <div class="card">
+                        <!-- card header  -->
+                        <div class="card-header">
+                            <h4 class="mb-0">Active Projects</h4>
+                        </div>
+                        <!-- table  -->
+                        <div class="card-body">
+                            <div class="table-responsive table-card">
+                                <table class="table text-nowrap mb-0 table-centered table-hover">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Project name</th>
+
+                                            <th>Score</th>
+                                            <th>Status</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+
+
+
+                                            <td><a href=""> welcome to olis macaulay projecr</a></td>
+                                            <td>34</td>
+                                            <td><span class="badge badge-warning-soft">Medium</span></td>
+
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- card footer  -->
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- row  -->
+            <!-- card  -->
+            <div class="col-xl-12 col-lg-12 col-md-12 col-12 mb-5 mb-xl-0">
+                <div class="card h-100">
+                    <!-- card header  -->
+                    <div class="card-header d-flex justify-content-between align-items-center"
+                        style="background-color: #2E3092;">
+                        <h4 class="mb-0 text-white">Cohort Project Submission</h4>
+                        <div class="dropdown">
+                            <a class="btn btn-outline-light btn-sm dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">cohorts</a>
+
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">cohort 12</a></li>
+                                <li><a class="dropdown-item" href="#">cohort 15</a></li>
+                                <li><a class="dropdown-item" href="#">cohort 30</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- table  -->
+                    <div class="card-body">
+                        <div class="table-responsive table-card">
+                            <table class="table text-nowrap mb-0 table-centered table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Deadline</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckOne" />
+                                                <label class="form-check-label" for="flexCheckOne">Design a
+                                                    FreshCart Home page</label>
+                                            </div>
+                                        </td>
+                                        <td>Today</td>
+                                        <td>
+                                            <span class="badge badge-success-soft">Approved</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckTwo" />
+                                                <label class="form-check-label" for="flexCheckTwo">Dash UI Dark
+                                                    Version Design</label>
+                                            </div>
+                                        </td>
+                                        <td>Yesterday</td>
+                                        <td>
+                                            <span class="badge badge-danger-soft">Pending</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckThree" />
+                                                <label class="form-check-label" for="flexCheckThree">Dash UI landing
+                                                    page design</label>
+                                            </div>
+                                        </td>
+                                        <td>16 Sept, 2023</td>
+                                        <td>
+                                            <span class="badge badge-warning-soft">In Progress</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckFour" />
+                                                <label class="form-check-label" for="flexCheckFour">Next.js Dash UI
+                                                    version</label>
+                                            </div>
+                                        </td>
+                                        <td>23 Sept, 2023</td>
+                                        <td>
+                                            <span class="badge badge-success-soft">Approved</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckFive" />
+                                                <label class="form-check-label" for="flexCheckFive">Develop a Dash
+                                                    UI Laravel</label>
+                                            </div>
+                                        </td>
+                                        <td>20 Sept, 2023</td>
+                                        <td>
+                                            <span class="badge badge-danger-soft">Pending</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckSix" />
+                                                <label class="form-check-label" for="flexCheckSix">Coach home page
+                                                    design</label>
+                                            </div>
+                                        </td>
+                                        <td>12 Sept, 2023</td>
+                                        <td>
+                                            <span class="badge badge-success-soft">Approved</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckSeven" />
+                                                <label class="form-check-label" for="flexCheckSeven">Develop a Dash
+                                                    UI Laravel</label>
+                                            </div>
+                                        </td>
+                                        <td>11 Sept, 2023</td>
+                                        <td>
+                                            <span class="badge badge-danger-soft">Pending</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- card  -->
+        </div>
+
+
+
+
+        <style>
+            .con {
+                width: 90%;
+                background-color: white;
+                padding: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                margin: 0 auto;
+
+
+
+            }
+        </style>
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        Swal.fire({
+            title: '<h2><span style="color: #7066e0;">Screening Notification</h2> </span> <h5>the following applicant has been selected for a physical  screening on Thursday, August 8, 2024, at 10:00 AM. <br/>Venue: <br> <strong>BOI-RSU Innovation Hub <br/> Faculty of Management Science Rivers state university.</h5>',
+            icon: 'success', // You can use 'info', 'warning', 'error', or a custom icon as needed
+            // imageUrl: 'https://obidientstechspace.com/flyer.jpg',
+            // imageWidth: 400,
+            // imageHeight: 400,
+            html:
+                '<a href="https://obidientstechspace.com/interview.pdf" class="btn" style="background-color: #7066e0; color: white; padding: 7px 10px; text-decoration: none; border-radius: 5px; font-size: 15px;"><i class="fas fa-graduation-cap" style="margin-right: 5px;"></i>View applicant</a>',
+            imageAlt: 'Success icon',
+            confirmButtonText: 'Cancel',
+        });
+    });
+</script>
+
+
+
+{% endblock content %}

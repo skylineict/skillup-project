@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="margin: 0; padding: 0; width:50%; margin: auto;" >
+    <div style="
+       
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        max-width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+    ">
+        <div style="
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #f0f0f0;
+            color: #003366;
+         
+        ">
+            <div style="width: 150px; margin: 0 auto;">
+                <img src="https://pbs.twimg.com/media/GUBin_sWgAAz81y?format=jpg&name=medium" alt="" style="width: 100%; height: auto;">
+            </div>
+            <div>
+                <h1 style="margin: 0; padding: 0;">Hey <strong> {{admissioin.user.full_name}} </strong> Congratulations!</h1>
+                <p style="margin: 20px 0; padding: 0;">You have been accepted into the Tech-up Skill <strong> {{admissioin.course}} </strong> 4-Months Programme.</p>
+                <a href="https://getdp.co/UpSkill" style="
+                    text-decoration: none
+                    background-color: #003366;
+                    padding: 8px 20px;
+                    color: white;
+                    border-radius: 20px;
+                    display: inline-block;
+                    margin-top: 20px;
+                    font-size: 16px;
+                ">Get a Sticker</a>
+                <div style="margin-top: 20px; text-align: center;">
+                    <img src="https://opolo.global/wp-content/uploads/2022/04/Opolo-png_050115-3-e1648883640655.png" alt="" style="margin: 0 10px; width: 80px; height: auto;">
+                    <img src="https://dayoadetiloye.com/wp-content/uploads/2018/04/BOI-Bank-of-Industry1.png" alt="" style="margin: 0 10px; width: 80px; height: auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+{% extends "admin/header.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+
+<!-- page content -->
+<div id="app-content">
+
+  <div class="app-content-area">
+
+    <div class="container-fluid">
+
+
+
+        <div class="row">
+            <div class="col-xxl-9 mb-5">
+              <div class="card mb-5">
+
+                <div class="row row-cols-xl-4 row-cols-1 row-cols-md-2 g-0">
+                  <div class="col ">
+                    <div class="card-body ">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                          <span class="fw-semi-bold">Cohort Groups</span>
+                          <h2 class="mb-0 mt-2 fw-bold">{{cohort_list}}</h2>
+
+                        </div>
+                        <div class="icon-shape icon-lg bg-warning-soft text-warning rounded-3">
+                          <i data-feather="users" class="icon-sm"></i>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col border-start-md">
+                    <div class="card-body border-top border-top-md-0 ">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                          <span class="fw-semi-bold">Cohorts Members</span>
+                          <h2 class="mb-0 mt-2 fw-bold">167</h2>
+
+                        </div>
+                        <div class="icon-shape icon-lg bg-info-soft text-info rounded-3">
+                          <i data-feather="file-text" class="icon-sm"></i>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                 
+
+
+                  <div class="col border-start-md mt-5">
+                    <div class="card-footer text-center"> <a href="" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#createcohort">Add Cohort</a> </div>
+                  </div>
+
+                  </div>
+                 
+
+                </div>
+
+              </div>
+              <div>
+               
+              </div>
+            </div>
+       
+
+          </div>
+
+
+
+          <div class="row">
+            <div class="col-xl-8 col-12 mb-5">
+                <!-- card  -->
+                <div class="card">
+                    <!-- card header  -->
+                    <div class="card-header">
+                        <h4 class="mb-0">Active Cohort Groups</h4>
+                    </div>
+                    <!-- table  -->
+                    <div class="card-body">
+                        <div class="table-responsive table-card">
+                            <table class="table text-nowrap mb-0 table-centered table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Chort name</th>
+                                
+                                        <th>Members</th>
+                                        <th>action</th>
+                                    
+                                    </tr>
+                                </thead>
+                                <tbody id="cohortlist">
+                                
+                                 
+                                 
+                                 
+                                 
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- card footer  -->
+                   
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-12 col-md-12 col-12 mb-5">
+                <!-- card  -->
+                <div class="card h-100">
+                    <!-- card body  -->
+                    <div class="card-header d-flex align-items-center justify-content-between">
+                        <div>
+                            <h4 class="mb-0">Tasks Performance</h4>
+                        </div>
+
+                        <!-- dropdown  -->
+                        <div class="dropdown dropstart">
+                            <a class="btn btn-icon btn-ghost btn-sm rounded-circle" href="#!" role="button" id="dropdownTask" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-xs" data-feather="more-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownTask">
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <!-- chart  -->
+                        <div class="mb-6">
+                            <div id="perfomanceChart"></div>
+                        </div>
+                        <!-- icon with content  -->
+                        <div class="d-flex align-items-center justify-content-around">
+                            <div class="text-center">
+                                <i class="icon-sm text-success" data-feather="check-circle"></i>
+                                <h1 class="fs-2 mb-0">76%</h1>
+                                <p>Completed</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="icon-sm text-warning" data-feather="trending-up"></i>
+                                <h1 class="fs-2 mb-0">32%</h1>
+                                <p>In-Progress</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="icon-sm text-danger" data-feather="trending-down"></i>
+                                <h1 class="fs-2 mb-0">13%</h1>
+                                <p>Behind</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+<!--         
+<div class="modal fade" id="createcohort" tabindex="-1" role="dialog" aria-labelledby="createcohort"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title text-danger" id="createcohort">  Create Cohort Group</h5>
+
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label class="form-label" for="textInput">Name</label>
+                <input type="text" id="textInput" class="form-control" placeholder="Enter Cohort">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="textInput">Group Link</label>
+                <input type="url" id="textInput" class="form-control" placeholder=" Group Link">
+              </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+          <a href=""> <input type="button" value="Save" class="btn btn-success"></a>
+         
+
+           
+        </div>
+    </div>
+</div>
+</div> -->
+
+
+{% endblock content %}
+
+

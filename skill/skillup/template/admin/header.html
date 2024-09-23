@@ -10,6 +10,9 @@
     <meta name="csrf-token" content="{{ csrf_token }}">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+   
+  
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8S4MT3EYG"></script>
     <script>
@@ -33,6 +36,12 @@
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{% static 'dash/assets/css/theme.min.css' %}">
+    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/43.1.0/ckeditor5.css">
+   <!-- iziToast CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" />
+
+<!-- iziToast JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
 
     <title>Skill Rsu -dashboard</title>
 
@@ -89,6 +98,76 @@
 
 
         }
+/* sweet aler css is design here  */
+
+/* 
+        div:where(.swal2-icon) {
+            position: relative;
+            box-sizing: content-box;
+            justify-content: center;
+            width: 2em;
+            height: 2em;
+            margin: 1.5em auto -0.4em;
+            border: 0.25em solid rgba(0, 0, 0, 0);
+            border-radius: 50%;
+            border-color: #000;
+            font-family: inherit;
+            line-height: -2em;
+            cursor: default;
+            user-select: none;
+        } */
+
+
+        div:where(.swal2-container) div:where(.swal2-popup) {
+    display: none;
+    position: relative;
+    box-sizing: border-box;
+    grid-template-columns: minmax(0, 100%);
+    width: 18em;
+    max-width: 100%;
+    padding: 0 0 1.25em;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    color: #545454;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=left] {
+    left: 0.0625em;
+    top: 2em;
+    transform: rotate(45deg);
+}
+
+
+
+
+div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=right] {
+    right: 0em;
+    top: 2em;
+    transform: rotate(-45deg);
+}
+
+
+div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line] {
+    display: block;
+    position: absolute;
+    top: 4.3125em;
+    width: 4.9375em;
+    height: 0.3125em;
+    border-radius: .125em;
+    background-color: #f27474;
+}
+
+
+
     </style>
 </head>
 
@@ -142,10 +221,20 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link  collapsed " href="" data-bs-toggle="modal" data-bs-target="#pendingadmission">
+                        <a class="nav-link  collapsed " href="{% url "admincohort" %}">
 
                             <i class="nav-icon me-2 icon-xxs" data-feather="file"></i>
-                            Course
+                          All Cohorts
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link  collapsed " href="{% url "statis" %}">
+
+                            <i class="nav-icon me-2 icon-xxs" data-feather="file"></i>
+                         Courses
                         </a>
 
                     </li>
@@ -174,16 +263,16 @@
                         <a class="nav-link has-arrow  collapsed " href="#!" data-bs-toggle="collapse"
                             data-bs-target="#navKanban" aria-expanded="false" aria-controls="navKanban">
                             <i data-feather="layout" class="nav-icon me-2 icon-xxs"></i>
-                            Task
+                            Class Room
                         </a>
 
                         <div id="navKanban" class="collapse " data-bs-parent="#sideNavbar">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link has-arrow " href=""  data-bs-toggle="modal" data-bs-target="#pendingadmission">Submit</a>
+                                    <a class="nav-link has-arrow " href=""  data-bs-toggle="modal" data-bs-target="#pendingadmission">Live Class</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link has-arrow " href="" data-bs-toggle="modal" data-bs-target="#pendingadmission">Veiw Task</a>
+                                    <a class="nav-link has-arrow " href="" data-bs-toggle="modal" data-bs-target="#pendingadmission">Recap Class</a>
                                 </li>
                             </ul>
                         </div>
@@ -272,6 +361,10 @@
         </div>
 
 
+
+   
+
+
         <div id="loadermain" style="display: none;">
             <div class="d-flex justify-content-center align-items-center"
                 style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 9999;">
@@ -280,6 +373,8 @@
                 </div>
             </div>
         </div>
+
+        
 
         <!-- Libs JS -->
 
@@ -299,13 +394,94 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="{% static 'js/logout.js' %}"></script>
         <script src="{% static 'dash/assets/js/custom.js' %}"></script>
+        <script src="{% static 'dash/assets/js/list_user.js' %}"></script>
+        <script src="{% static 'dash/assets/js/course_list_byuser.js' %}"></script>
+        <script src="{% static 'dash/assets/js/cohortlist.js' %}"></script>
+        <script src="{% static 'dash/assets/js/cohort_listendpoint.js' %}"></script>
+        <script src="{% static 'dash/assets/js/create_project.js' %}"></script>
+  
+  
+<!-- Initialize CKEditor -->
+
+
+<script type="importmap">
+    {
+        "imports": {
+            "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/43.1.0/ckeditor5.js",
+            "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/43.1.0/"
+        }
+    }
+</script>
 
 
 
+<script type="module">
+    import {
+        ClassicEditor,
+        Essentials,
+        Paragraph,
+        Bold,
+        Italic,
+        Font
+    } from 'ckeditor5';
+
+    ClassicEditor
+        .create( document.querySelector( '#myeditor' ), {
+            plugins: [ Essentials, Paragraph, Bold, Italic, Font ],
+            toolbar: [
+                'undo', 'redo', '|', 'bold', 'italic', '|',
+                'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor'
+            ]
+        } )
+        .then( editor => {
+            window.editor = editor;
+        } )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 
 
-
-
+        <div class="modal fade" id="createcohort" tabindex="-1" role="dialog" aria-labelledby="createcohort" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+          
+                <div class="modal-header">
+                  <h5 class="modal-title text-danger" id="createcohort">Create Cohort Group</h5>
+                </div>
+          
+          
+          
+          
+                <div class="modal-body">
+                  <form class="form" method="post" id="cohortform">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                      <label class="form-label" for="cohortName">Name</label>
+                      <input type="text" id="cohortName" name="name" class="form-control" placeholder="Enter Cohort Name">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label" for="cohortLink">Group Link</label>
+                      <input type="url" id="cohortLink" name="url" class="form-control" placeholder="Group Link">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                      <button type="submit" id="cohortsubmit" class="btn btn-success"><span id="btn-text">Save</span>
+          
+                      </button>
+                      <span class="spinner-border  text-primary  " id="spinner" role="status" aria-hidden="true"
+                        style="display: none;"></span>
+                    </div>
+                  </form>
+                </div>
+          
+          
+          
+          
+          
+              </div>
+            </div>
+          </div>
 
 
     </main>

@@ -1,83 +1,58 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatsApp Web Prototype</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f0f0f0;
-        }
-
-        .header {
-            background-color: #00bfa5;
-            /* background-color: darkblue; */
-            padding: 10px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            
-        }
-
-        .card {
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .qr-code {
-            width: 200px;
-            height: 200px;
-        }
-
-        .help-link {
-            color: #34b7f1;
-        }
-    </style>
+    <title>Document</title>
 </head>
-
-<body>
-    <div class="header">
-        <div class="container">
-            <span>Registration successfully </span>
-        </div>
-    </div>
-    <div class="container">
-        <div class="card">
-            <div class="row">
-                <div class="col-md-8">
-                    <h4>Boi Impact Program:</h4>
-                    <ol>
-                        <li class="p-3"><span class="text-danger">Instructions:</span>  Congratulations! Use your DPT number to log in to access your dashboard.
-                            Download the registration ticket; this will be used for your screening 
-                           and access to the training center. Log in to check your admission status.
-                       </li>
-                       
-
-                        <li>Full Name: <strong>{{profile.user.full_name}}</strong></li>
-                        <li>DPT NO: <span class="fas fa-user p-2"></span><strong>{{profile.user.dp_no}}</strong>
-                        </li>
-                        <li>Faculty:  <span class="fas fa-user p-2"></span><strong>{{profile.faculty}}</strong></li>
-                        <li>Department:  <span class="fas fa-user p-2"></span><strong>{{profile.department}}</strong></li>
-                           
-                       
-                    </ol>
-                    <a href="#" class="help-link" style="color: white; background-color: #00bfa5; padding: 10px; border-radius: 10px;">Join the Training Whatsapp Group</a>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="{{profile.image.url}}" alt="QR Code" class="qr-code"  style="border-radius: 30% ; margin-top:20px ;">
-                    <div class="form-check">
-                        <a href="{% url 'download' %}" class="btn btn-primary btn-sm" style="margin-top: 10px;"> download ticket</a>
-                       
-                    </div>
+<body style="margin: 0; padding: 0; width:50%; margin: auto;" >
+    <div style="
+       
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        max-width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+    ">
+        <div style="
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #f0f0f0;
+            color: #003366;
+         
+        ">
+            <div style="width: 150px; margin: 0 auto;">
+                <img src="https://pbs.twimg.com/media/GUBin_sWgAAz81y?format=jpg&name=medium" alt="" style="width: 100%; height: auto;">
+            </div>
+            <div>
+                <h1 style="margin: 0; padding: 0;">Hey <strong>Olisa,</strong> Congratulations!</h1>
+                <p style="margin: 20px 0; padding: 0;">You have been accepted into the Tech-up Skill <strong>Digital Marketing</strong> 4-Months Programme.</p>
+                <a href="https://getdp.co/UpSkill" style="
+                    text-decoration: none;
+                    background-color: #003366;
+                    padding: 8px 20px;
+                    color: white;
+                    border-radius: 20px;
+                    display: inline-block;
+                    margin-top: 20px;
+                    font-size: 16px;
+                ">Get a Sticker</a>
+                <div style="margin-top: 20px; text-align: center;">
+                    <img src="https://opolo.global/wp-content/uploads/2022/04/Opolo-png_050115-3-e1648883640655.png" alt="" style="margin: 0 10px; width: 80px; height: auto;">
+                    <img src="https://dayoadetiloye.com/wp-content/uploads/2018/04/BOI-Bank-of-Industry1.png" alt="" style="margin: 0 10px; width: 80px; height: auto;">
                 </div>
             </div>
         </div>
     </div>
 </body>
-
 </html>

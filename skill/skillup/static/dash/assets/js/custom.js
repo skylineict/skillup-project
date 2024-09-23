@@ -32,8 +32,11 @@ document.addEventListener('DOMContentLoaded', function () {
 																</div>
 															</div>
 														</td>
-														<td>${profile.id}</td>
-														<td> ${date.getDate()}- ${date.getMonth()}- ${date.getFullYear()}</td>
+                                                         <td> ${profile.user__email}</td>
+                                                         <td> ${profile.course__name}</td>
+														<td>${profile.department}</td>
+														<td> ${profile.user__email}</td>
+                                                       
 														<td>
 															<div class="dropdown dropstart">
 																<a

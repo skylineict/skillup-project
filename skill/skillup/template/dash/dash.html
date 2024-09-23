@@ -37,6 +37,8 @@
                 </div>
             </div>
             <div class="row row-cols-1  row-cols-xl-4 row-cols-md-2 ">
+{% if not user.profiles.admitted %}
+
 
                 <div class="col mb-5">
                     <div class="card h-100 card-lift">
@@ -54,6 +56,8 @@
                         </div>
                     </div>
                 </div>
+
+                {% endif %}
                 <div class="col mb-5">
                     <div class="card h-100 card-lift">
                         
@@ -63,11 +67,24 @@
 
 
                             </div>
-                            <div class="mt-4 mb-3 d-flex align-items-center lh-1">
-                                <h5 class="fw-bold  mb-0">Pass-0034567</h5>
+{% if user.profiles.passcode %}
+            <div class="mt-4 mb-3 d-flex align-items-center lh-1">
+                                <h5 class="fw-bold  mb-0">{{user.profiles.passcode}}</h5>
 
                             </div>
+                          
+                
                             <a href="#!" class="btn-link fw-semi-bold">Re-assign</a>
+                            {% else %}
+
+                            <div class="mt-4 mb-3 d-flex align-items-center lh-1">
+                                <h5 class="fw-bold  mb-0">No Passcode</h5>
+
+                            </div>
+
+
+                            {% endif %}
+
                         </div>
                     </div>
                 </div>
@@ -87,6 +104,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col mb-5">
                     <div class="card h-100 card-lift">
                         <div class="card-body">
@@ -98,11 +116,172 @@
                             <div class="mt-4 mb-3 d-flex align-items-center lh-1">
                                 <h5 class="fw-bold  mb-0">10%</h5>
                             </div>
-                            <a href="#!" class="btn-link fw-semi-bold">My Project</a>
+                            <a href="{% url "project" %}" class="btn-link fw-semi-bold">My Project</a>
                         </div>
                     </div>
                 </div>
+
+{% if  user.profiles.admitted %}
+                <div class="col mb-5">
+                    <div class="card h-100 card-lift">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-muted fw-semi-bold ">My Cohort</span>
+
+
+                            </div>
+                            <div class="mt-4 mb-3 d-flex align-items-center lh-1">
+                                <h5 class="fw-bold  mb-0">20 Persons</h5>
+                            </div>
+                            <a href="#!" class="btn-link fw-semi-bold">View</a>
+                        </div>
+                    </div>
+                </div>
+
+                {% endif %}
              
+
+            </div>
+
+
+
+            
+            <div class="col mb-5 mt-5">
+                <div class="card h-100 cohort">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h4 class="mb-0">Cohort of the Week</h4>
+
+
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive table-card">
+                            <table class="table mb-0 text-nowrap table-centered">
+                                <thead class="table-success">
+                                    <tr>
+
+                                        <th>Cohorts</th>
+                                        <th class="text-end">Weekly Grade</th>
+                                        <th class="text-end"></th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+
+                                        <td>
+                                            Cohorts 1
+                                        </td>
+                                        <td class="text-end">
+                                            90%
+                                        </td>
+                                        <td class="ps-0">
+                                            <div class="progress" style="height: 4px;">
+                                                <div class="progress-bar bg-info" role="progressbar"
+                                                    aria-label="Basic example" style="width: 75%"
+                                                    aria-valuenow="75" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            Google
+                                        </td>
+                                        <td class="text-end">
+                                            4,768
+                                        </td>
+                                        <td class="ps-0">
+                                            <div class="progress" style="height: 4px;">
+                                                <div class="progress-bar bg-success" role="progressbar"
+                                                    aria-label="Basic example" style="width: 54%"
+                                                    aria-valuenow="54" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            Referrals
+                                        </td>
+                                        <td class="text-end">
+                                            425
+                                        </td>
+                                        <td class="ps-0">
+                                            <div class="progress" style="height: 4px;">
+                                                <div class="progress-bar" role="progressbar"
+                                                    aria-label="Basic example" style="width: 64%"
+                                                    aria-valuenow="64" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            Social Media
+                                        </td>
+                                        <td class="text-end">
+                                            245
+                                        </td>
+                                        <td class="ps-0">
+                                            <div class="progress" style="height: 4px;">
+                                                <div class="progress-bar bg-warning" role="progressbar"
+                                                    aria-label="Basic example" style="width: 34%"
+                                                    aria-valuenow="34" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            Campaign
+                                        </td>
+                                        <td class="text-end">
+                                            23
+                                        </td>
+                                        <td class="ps-0">
+                                            <div class="progress" style="height: 4px;">
+                                                <div class="progress-bar bg-info" role="progressbar"
+                                                    aria-label="Basic example" style="width: 23%"
+                                                    aria-valuenow="23" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            Others
+                                        </td>
+                                        <td class="text-end">
+                                            153
+                                        </td>
+                                        <td class="ps-0">
+                                            <div class="progress" style="height: 4px;">
+                                                <div class="progress-bar bg-danger" role="progressbar"
+                                                    aria-label="Basic example" style="width: 14%"
+                                                    aria-valuenow="14" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
@@ -126,6 +305,139 @@
                 </div>
               </div>
 
+              <div class="col-lg-12 col-md-12 col-12 mt-5">
+                <!-- Page header -->
+                <div class="mb-4">
+                    <h4 class="mb-0 ">Ongoing Project</h4>
+
+                </div>
+            </div>
+
+              <div class="row mt-5">
+             
+
+
+
+            
+
+
+
+                {% if on_going_project  %}
+                {% for project  in on_going_project %}
+                
+               
+               
+            
+                <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-5">
+                    <!-- card -->
+                    <div class="card h-100">
+                        <!-- card body -->
+                        <div class="card-body">
+                            <!-- heading-->
+                            <div class="d-flex align-items-center
+                                    justify-content-between">
+
+                                <!-- text-->
+
+                                <div>
+                                    <h4 class="mb-0 h5"><a href="{% url "student_projects" project.project_id  %}" class="text-inherit"
+                                            style="color: #dc3545;">{{project.project_name}}</a></h4>
+
+
+
+                                </div>
+                                <!-- dropdown-->
+                                <div class="d-flex align-items-center">
+
+
+                                </div>
+                            </div>
+                            <!-- para-->
+                            <div class="mt-3 mb-4">
+                                <p class="mb-0">{{project.description|slice:100|safe}}</p>
+                            </div>
+                            <!-- progress -->
+                            <div class="d-flex justify-content-between
+                                    align-items-center mb-5">
+                                <div class="d-flex align-items-center">
+                                    <!-- avatar group -->
+
+                                </div>
+                                <!-- text -->
+                                {% for status in project.status.all %}
+                                {% if status.user == request.user %}
+                                {% if status.get_status_display == 'Pending' %}
+                                <div>
+                                    <span class="badge badge-danger-soft ">{{status.get_status_display }}</span>
+
+                                </div>
+
+                                {% elif status.get_status_display == 'progress' %}
+                                <div>
+                                    <span class="badge badge-success-soft ">{{status.get_status_display }}</span>
+
+                                </div>
+                                
+                                {% endif %}
+
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                            <div>
+                                <!-- progress bar -->
+                                <div class="d-flex justify-content-between mb-2 fs-6"> <span>required score</span>
+                                    <span>{{ project.task_required_score }}%</span>
+                                </div>
+                                <div class="progress" style="height: 6px;">
+                                    <div class="progress-bar bg-info " role="progressbar" style="width: 45%;"
+                                        aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card footer -->
+                        <div class="card-footer p-0" style="
+                    background-color: #d1e7dd;">
+                            <div class="d-flex justify-content-between ">
+                                <div class="w-50 py-3 px-4 ">
+                                    <h6 class="mb-0 text-muted">Start Date:</h6>
+                                    <p class="text-dark fs-6  mb-0">{{ project.start_date|date:"d M, Y" }}</p>
+                                </div>
+                                <div class="border-start w-50 py-3 px-4">
+                                    <h6 class="mb-0 text-muted">Due Date:</h6>
+                                    <p class="text-dark fs-6  mb-0">{{ project.end_date|date:"d M, Y" }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                {% endfor %}
+
+                {% else %}
+
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-5">
+                    <!-- card -->
+                    <div class="card h-100">
+                        <!-- card body -->
+                        <div class="card-body text-center">
+                            <h4 class="mb-0">No current projects. Enjoy!</h4>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+
+
+
+
+
+
+            </div>
+
          
 
 
@@ -136,6 +448,35 @@
 </div>
 
 
+<script>
+    {% comment %} document.addEventListener('DOMContentLoaded', function () {
+        Swal.fire({
+            title: '<h5><span style="color: #7066e0;">Admission is in process.</span> <br> Please register for your course before you are admitted.</h5>',
+            icon: 'success', // You can use 'info', 'warning', 'error', or a custom icon as needed
+            // imageUrl: 'https://obidientstechspace.com/flyer.jpg',
+            // imageWidth: 400,
+            // imageHeight: 400,
+            html: '<a href="#" class="btn" style="background-color: #25D366; color: white; padding: 7px 10px; text-decoration: none; border-radius: 5px;"><i class="fab fa-whatsapp" style="margin-right: 5px;"></i>Join Community</a> ' +
+                  '<a href="https://meet.google.com/wsw-cbme-ncm" class="btn" style="background-color: #7066e0; color: white; padding: 7px 10px; text-decoration: none; border-radius: 5px; font-size: 15px;"><i class="fas fa-graduation-cap" style="margin-right: 5px;"></i>Register Course</a>',
+            imageAlt: 'Success icon',
+            confirmButtonText: 'Cancel',
+        });
+    }); {% endcomment %}
+
+    document.addEventListener('DOMContentLoaded', function () {
+        Swal.fire({
+            title: '<h2><span style="color: #7066e0;">Screening Notification</h2> </span> <h5>the following applicant has been selected for a physical  screening on Thursday, August 8, 2024, at 10:00 AM. <br/>Venue: <br> <strong>BOI-RSU Innovation Hub <br/> Faculty of Management Science Rivers state university.</h5>',
+            icon: 'success', // You can use 'info', 'warning', 'error', or a custom icon as needed
+            // imageUrl: 'https://obidientstechspace.com/flyer.jpg',
+            // imageWidth: 400,
+            // imageHeight: 400,
+            html: 
+                  '<a href="https://obidientstechspace.com/interview.pdf" class="btn" style="background-color: #7066e0; color: white; padding: 7px 10px; text-decoration: none; border-radius: 5px; font-size: 15px;"><i class="fas fa-graduation-cap" style="margin-right: 5px;"></i>View applicant</a>',
+            imageAlt: 'Success icon',
+            confirmButtonText: 'Cancel',
+        });
+    });
+</script>
 
 
 

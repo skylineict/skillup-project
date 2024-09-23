@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'user',
     'cms',
+    'cohorts',
+    'projects',
     
 ]
 
@@ -81,7 +83,7 @@ WSGI_APPLICATION = 'skillup.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'sky.sqlite3',
+        'NAME': BASE_DIR / 'main.sqlite3',
     }
 }
 
@@ -109,10 +111,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'obidientstechspace.com'
+EMAIL_HOST = 'mail.skylineict.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True 
-EMAIL_HOST_USER = 'dev@obidientstechspace.com'
+EMAIL_HOST_USER = 'techupskill@skylineict.com'
 EMAIL_HOST_PASSWORD = 'Monoskey@93'
 
 
@@ -159,4 +161,21 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # }
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'skill',
+#         'USER': 'skill',
+#         'PASSWORD': 'skill',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+
+
+
+# }
+
+CELERY_BROKER_URL = ''
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
 

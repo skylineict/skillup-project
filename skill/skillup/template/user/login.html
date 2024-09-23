@@ -51,7 +51,7 @@
 										
 									  </div>
 									<div class="mb-3">
-										<label for="exampleFormControlInput1" class="form-label mb-2 fs-13 label-color font-w500">DPT NO:</label>
+										<label for="exampleFormControlInput1" class="form-label mb-2 fs-13 label-color font-w500">DPT ID:</label>
 									  <input type="text" class="form-control" name="dptno" id="username" placeholder="Enter Dpt number(opolo234)">
 									</div>
 									
@@ -76,7 +76,7 @@
 								</form>
 								<div class="new-account mt-3 text-center">
 									<p class="font-w500">Create a new account <a class="text-primary" href="{% url "register" %}">Sign Up</a></p>
-                                    <p class="font-w500">Unable to access my account <a class="text-primary" href="#">Forget password</a></p>
+                                    <p class="font-w500">Unable to access my account <a class="text-primary" href="{% url "resent" %}">Account Recovery</a></p>
 								</div>
 							</div>
 						</div>

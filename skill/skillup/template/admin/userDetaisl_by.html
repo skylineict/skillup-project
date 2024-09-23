@@ -1,0 +1,106 @@
+{% extends "admin/header.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+
+<!-- page content -->
+<div id="app-content">
+
+    <div class="app-content-area">
+
+        <div class="container-fluid">
+
+
+
+            <input type="hidden" id="courseId" value="{{ course.id }}">
+
+
+
+
+
+            <div class="row">
+                <div class="col-xl-12 col-12 mb-5">
+                    <!-- card  -->
+                    <div class="card">
+                        <!-- card header  -->
+                        <div class="card-header">
+                            <h4 class="mb-0">Available courses </h4>
+                        </div>
+                        <!-- table  -->
+                        <div class="card-body">
+                            <div class="table-responsive table-card">
+                                <table class="table text-nowrap mb-0 table-centered table-hover">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Full name</th>
+                                            <th>courses</th>
+                                            <th>Email</th>
+                                          
+
+                                        </tr>
+                                    </thead>
+                                    <tbody id="Course_list_Bycateogry">
+
+                                       
+                                      
+
+                                   
+
+
+                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- card footer  -->
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="createcohort" tabindex="-1" role="dialog" aria-labelledby="createcohort" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-danger" id="createcohort"> Create Cohort Group</h5>
+
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label" for="textInput">Name</label>
+                    <input type="text" id="textInput" class="form-control" placeholder="Enter Cohort">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="textInput">Group Link</label>
+                    <input type="url" id="textInput" class="form-control" placeholder=" Group Link">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                <a href=""> <input type="button" value="Save" class="btn btn-success"></a>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}
+
+

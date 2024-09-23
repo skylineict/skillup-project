@@ -1,0 +1,71 @@
+{% extends "user/header.html" %}
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+{% load static %}
+
+
+
+
+
+{% block content %}
+
+
+
+<div class="authincation d-flex flex-column flex-lg-row flex-column-fluid  regbg">
+
+    <div
+        class="container flex-row-fluid d-flex flex-column justify-content-center position-relative overflow-hidden p-7 mx-auto">
+        <div class="d-flex justify-content-center h-100 align-items-center">
+            <div class="authincation-content style-2">
+                <div class="row no-gutters">
+                    <div class="col-xl-12 tab-content">
+                        <div id="sign-up" class="auth-form tab-pane fade show active  form-validation">
+                            <form action="" method="post" class="form" id="otp_resent">
+                                {% csrf_token %}
+                                <div class="text-center mb-4">
+
+                                    <img src="https://opolo.global/wp-content/uploads/2022/04/Opolo-png_050115-3-e1648883640655.png"
+                                        alt="" width="150">
+                                </div>
+
+
+                                <div class="alert" id="message" role="alert" style="display: none;">
+
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1"
+                                        class="form-label mb-2 fs-13 label-color font-w500">Enter Your Registered
+                                        Email</label>
+                                    <input type="text" class="form-control" name="email" id="otp"
+                                        placeholder=" Enter email">
+                                </div>
+
+
+                                <button type="submit" class="btn btn-block btn-primary " id="submitbtn">
+                                    <span id="btn-text">submit</span>
+
+                                </button>
+                                <span class="spinner-border  text-primary  " id="spinner" role="status"
+                                    aria-hidden="true" style="display: none;"></span>
+
+
+                            </form>
+                            <div class="new-account mt-3 text-center">
+                                <p class="font-w500">Already Verified <a class="text-primary"
+                                        href="{% url 'login' %}">Login</a></p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}
+
+</html>

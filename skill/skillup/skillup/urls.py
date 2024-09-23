@@ -24,7 +24,8 @@ urlpatterns = [
     path('user/', include('user.urls')),
      path('backend/', include('dashboard.urls')),
     path('blog/', include('cms.urls')),
-     path('adminback/', include('admindash.urls'))
+    path('adminback/', include('admindash.urls')),
+    
 ]
 
 
